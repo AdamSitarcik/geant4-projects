@@ -8,6 +8,7 @@
 
 int main(int argc, char** argv){
 	G4RunManager *runManager = new G4RunManager();
+	runManager->Initialize();
 
 	G4UIExecutive *ui = new G4UIExecutive(argc, argv);
 
