@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/adam/skola/phd/geant4/sim1/construction.cc" "/home/adam/skola/phd/geant4/sim1/build/CMakeFiles/sim1.dir/construction.cc.o"
+  "/home/adam/skola/phd/geant4/sim1/physics.cc" "/home/adam/skola/phd/geant4/sim1/build/CMakeFiles/sim1.dir/physics.cc.o"
   "/home/adam/skola/phd/geant4/sim1/sim1.cc" "/home/adam/skola/phd/geant4/sim1/build/CMakeFiles/sim1.dir/sim1.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
