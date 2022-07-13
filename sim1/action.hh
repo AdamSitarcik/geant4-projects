@@ -3,6 +3,7 @@
 
 #include "G4VUserActionInitialization.hh"
 
+
 class MyActionInitialization : public G4VUserActionInitialization
 {
 public:
@@ -10,4 +11,6 @@ public:
     ~MyActionInitialization();
 
     virtual void Build() const;
+};
+
 #endif
