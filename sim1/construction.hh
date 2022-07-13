@@ -19,8 +19,8 @@ class MyDetectorConstruction : public G4VUserDetectorConstruction
 		~MyDetectorConstruction();
 
 		virtual G4VPhysicalVolume *Construct();
-	// private:
-	// 	G4LogicalVolume *fScoringVolume;
+	private:
+		G4LogicalVolume *logicDetector;
 };
 
 
