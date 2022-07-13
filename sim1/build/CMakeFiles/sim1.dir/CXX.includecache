@@ -887,4 +887,6 @@ G4VPhysicalVolume.hh
 /home/adam/skola/phd/geant4/sim1/G4VPhysicalVolume.hh
 G4NistManager.hh
 /home/adam/skola/phd/geant4/sim1/G4NistManager.hh
+G4MaterialPropertiesTable.hh
+/home/adam/skola/phd/geant4/sim1/G4MaterialPropertiesTable.hh
 
