@@ -21,7 +21,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 
   fParticleGun->SetParticlePosition(pos);
   fParticleGun->SetParticleMomentumDirection(mom);
-  fParticleGun->SetParticleMomentum(100.*GeV);
+  fParticleGun->SetParticleMomentum(10.*GeV);
   fParticleGun->SetParticleDefinition(particle);
 
   fParticleGun->GeneratePrimaryVertex(anEvent);

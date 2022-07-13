@@ -10,7 +10,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
 	G4NistManager *nist = G4NistManager::Instance();
 	G4Material *worldMat = nist->FindOrBuildMaterial("G4_AIR");
-	G4Material *shapeMat = nist->FindOrBuildMaterial("G4_Pb");
+	G4Material *shapeMat = nist->FindOrBuildMaterial("G4_WATER");
 
 	G4Material *SiO2 = new G4Material("SiO2", 2.201*g/cm3, 2);
 	SiO2->AddElement(nist->FindOrBuildElement("Si"), 1);
@@ -27,16 +27,23 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	Aerogel->AddMaterial(H2O, 37.4*perCent);
 	Aerogel->AddElement(C, 0.1*perCent);
 
-  G4double energy[2] = {1.239841939*eV/0.2, 1.239841939*eV/0.9};
+  G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2};
 	G4double rindexAerogel[2] = {1.1, 1.1};
-	// G4double rindexWorld[2]={1., 1.};
+	G4double rindexShape[2]={25., 25.};
+	G4double rindexWorld[2] = {1., 1.};
+
 
 	G4MaterialPropertiesTable *mptAerogel = new G4MaterialPropertiesTable();
-	// G4MaterialPropertiesTable *mptWorld = new G4MaterialPropertiesTable();
+	G4MaterialPropertiesTable *mptShape = new G4MaterialPropertiesTable();
+	G4MaterialPropertiesTable *mptWorld = new G4MaterialPropertiesTable();
 	mptAerogel->AddProperty("RINDEX", energy, rindexAerogel, 2);
-	// mptWorld->AddProperty("RINDEX", energy, rindexWorld);
+	mptShape->AddProperty("RINDEX", energy, rindexShape, 2);
+	mptWorld->AddProperty("RINDEX", energy, rindexWorld, 2);
+
 	Aerogel->SetMaterialPropertiesTable(mptAerogel);
-	// worldMat->SetMaterialPropertiesTable(mptWorld);
+	shapeMat->SetMaterialPropertiesTable(mptShape);
+	worldMat->SetMaterialPropertiesTable(mptWorld);
+
 
 	G4Box *solidWorld = new G4Box("solidWorld", 0.5*m, 0.5*m, 0.5*m);
 
