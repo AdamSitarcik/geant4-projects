@@ -16,9 +16,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
   G4StepPoint *postStepPoint = aStep->GetPostStepPoint();
 
-  G4ThreeVector posPhoton = preStepPoint->GetPosition();
+  G4ThreeVector startPosPhoton = preStepPoint->GetPosition();
+  G4ThreeVector endPosPhoton = postStepPoint->GetPosition();
 
-  // G4cout << "Photon position: " << posPhoton << G4endl;
+  // G4cout << "Photon position: " << endPosPhoton << G4endl;
 
   const G4VTouchable * touchable = aStep->GetPreStepPoint()->GetTouchable();
 
@@ -29,7 +30,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
   G4VPhysicalVolume *physVol = touchable->GetVolume();
   G4ThreeVector posDetector = physVol->GetTranslation();
 
-  G4cout<< posDetector << G4endl;
+  // G4cout<< posDetector << G4endl;
 
   G4int evt = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
