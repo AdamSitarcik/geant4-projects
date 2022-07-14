@@ -27,7 +27,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
   G4Tubs *solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0*mm, 35*mm, 140*mm/2, 0., 360*deg);
   logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, detMat2, "logicDetector_Ge");
-  G4VPhysicalVolume *physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., 72*mm), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);  
+  G4VPhysicalVolume *physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., -72*mm), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);  
 
   return physWorld;
 }

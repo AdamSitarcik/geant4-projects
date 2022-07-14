@@ -6,8 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/adam/skola/phd/geant4/ship_PSSD/action.cc" "/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir/action.cc.o"
   "/home/adam/skola/phd/geant4/ship_PSSD/construction.cc" "/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir/construction.cc.o"
+  "/home/adam/skola/phd/geant4/ship_PSSD/detector.cc" "/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir/detector.cc.o"
   "/home/adam/skola/phd/geant4/ship_PSSD/generator.cc" "/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir/generator.cc.o"
   "/home/adam/skola/phd/geant4/ship_PSSD/physics.cc" "/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir/physics.cc.o"
+  "/home/adam/skola/phd/geant4/ship_PSSD/run.cc" "/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir/run.cc.o"
   "/home/adam/skola/phd/geant4/ship_PSSD/ship_pssd.cc" "/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir/ship_pssd.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
