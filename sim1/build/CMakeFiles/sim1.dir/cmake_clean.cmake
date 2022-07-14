@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sim1.dir/detector.cc.o"
   "CMakeFiles/sim1.dir/generator.cc.o"
   "CMakeFiles/sim1.dir/physics.cc.o"
+  "CMakeFiles/sim1.dir/run.cc.o"
   "CMakeFiles/sim1.dir/sim1.cc.o"
   "sim1"
   "sim1.pdb"
