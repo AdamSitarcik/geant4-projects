@@ -62,9 +62,17 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
 	for(G4int i=0; i<100; i++){
 		for(G4int j=0; j<100;j++){
-			G4VPhysicalVolume *physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/100, -0.5*m+(j+0.5)*m/100, 0.5*m-1*cm), logicDetector, "physDetector", logicWorld, false, i+j*100, true);
+			G4VPhysicalVolume *physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/100, -0.5*m+(j+0.5)*m/100, 0.5*m-1*cm), logicDetector, "physDetector", logicWorld, false, j+i*100, true);
 		}
 	}
 
 	return physWorld;
+}
+
+void MyDetectorConstruction::ConstructSDandField()
+{
+	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
+
+	logicDetector->SetSensitiveDetector(sensDet);
+
 }

@@ -13,7 +13,7 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
 void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 {
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
-  G4String particleName = "gamma";
+  G4String particleName = "proton";
   G4ParticleDefinition *particle = particleTable->FindParticle(particleName);
 
   G4ThreeVector pos(0., 0., 0.);
