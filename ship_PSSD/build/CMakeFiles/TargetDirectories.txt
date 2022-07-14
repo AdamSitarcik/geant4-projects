@@ -1,0 +1,4 @@
+/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/rebuild_cache.dir
+/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/edit_cache.dir
+/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/SHIP_PSSD_Detector.dir
+/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles/pssd.dir
