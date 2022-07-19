@@ -91,6 +91,9 @@ CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-insta
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleTableIterator.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PrimaryParticle.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PrimaryVertex.hh
+CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.hh
+CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.icc
+CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Run.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.icc
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4SystemOfUnits.hh
@@ -123,6 +126,9 @@ CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-insta
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VUserActionInitialization.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ios.hh
+CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Globals.hh
+CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Types.hh
+CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Utility.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/Randomize.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
 CMakeFiles/sim1.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/pwdefs.hh
@@ -1001,6 +1007,9 @@ CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NtupleBookingManager.icc
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4P1ToolsManager.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4P2ToolsManager.hh
+CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.hh
+CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.icc
+CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Run.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.icc
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THnManager.hh
@@ -1029,6 +1038,9 @@ CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VP2Manager.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VTHnFileManager.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ios.hh
+CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Globals.hh
+CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Types.hh
+CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Utility.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/templates.hh
 CMakeFiles/sim1.dir/run.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tls.hh
@@ -1302,6 +1314,7 @@ CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ReplicaNavigation.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ReplicaNavigation.icc
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RotationMatrix.hh
+CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Run.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RunManager.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RunManagerKernel.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4SandiaTable.hh
