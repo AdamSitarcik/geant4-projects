@@ -4,7 +4,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
 {
   fParticleGun = new G4ParticleGun(1);
   fParticleGun->SetParticleEnergy(100.*MeV);
-  
+
 }
 
 MyPrimaryGenerator::~MyPrimaryGenerator()
