@@ -2,9 +2,8 @@
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
-	nCols = 100;
-	nRows = 100;
-
+	nCols = 50;
+	nRows = 50;
 	xWorld = 0.5*m;
 	yWorld = 0.5*m;
 	zWorld = 0.5*m;
@@ -47,11 +46,8 @@ void MyDetectorConstruction::DefineMaterial()
 	Aerogel->AddMaterial(SiO2, 62.5*perCent);
 	Aerogel->AddMaterial(H2O, 37.4*perCent);
 	Aerogel->AddElement(C, 0.1*perCent);
-}
 
-G4VPhysicalVolume *MyDetectorConstruction::Construct()
-{
-  G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2};
+	G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2};
 	G4double rindexAerogel[2] = {1.1, 1.1};
 	G4double rindexShape[2]={25., 25.};
 	G4double rindexWorld[2] = {1., 1.};
@@ -66,25 +62,22 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	Aerogel->SetMaterialPropertiesTable(mptAerogel);
 	shapeMat->SetMaterialPropertiesTable(mptShape);
 	worldMat->SetMaterialPropertiesTable(mptWorld);
+}
 
+G4VPhysicalVolume *MyDetectorConstruction::Construct()
+{
 	solidWorld = new G4Box("solidWorld", xWorld, yWorld, zWorld);
-
 	logicWorld = new G4LogicalVolume(solidWorld, worldMat, "logicWorld");
-
 	physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
 
 	solidRadiator = new G4Box("solidRadiator", 0.4*m, 0.4*m, 0.01*m);
 	logicRadiator = new G4LogicalVolume(solidRadiator, Aerogel, "logicalRadiator");
-	// fScoringVolume = logicRadiator;
 	physRadiator = new G4PVPlacement(0, G4ThreeVector(0.,0.,0.1*m), logicRadiator, "physRadiator", logicWorld, false, 0, true);
 
 	solidDetector = new G4Box("solidDetector", xWorld/nRows, yWorld/nCols, zDetector);
-
 	logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicalDetector");
-
 	for(G4int i=0; i<nRows; i++){
 		for(G4int j=0; j<nCols;j++){
-			// physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 0.49*m), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);
 			physDetector = new G4PVPlacement(0, G4ThreeVector(-xWorld+(i*m+xWorld)/nRows, -yWorld+(j*m+yWorld)/nCols, zWorld-zRadiator), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);
 		}
 	}

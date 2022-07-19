@@ -23,7 +23,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
   std::stringstream strRunID;
   strRunID << runID;
 
-  man->OpenFile("output"+strRunID.str()+".root");
+  man->OpenFile("root_outputs/output"+strRunID.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)
