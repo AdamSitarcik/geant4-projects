@@ -94,5 +94,4 @@ void MyDetectorConstruction::ConstructSDandField()
 	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
 
 	logicDetector->SetSensitiveDetector(sensDet);
-
 }

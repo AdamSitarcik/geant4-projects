@@ -50,5 +50,5 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
   fAlphaParticleGun->SetParticleDefinition(alpha);
 
-  fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
+  // fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
 }

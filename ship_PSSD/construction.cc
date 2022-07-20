@@ -41,3 +41,10 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
   return physWorld;
 }
+
+void MyDetectorConstruction::ConstructSDandField()
+{
+  MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
+
+  logicDetector_PSSD->SetSensitiveDetector(sensDet);
+}

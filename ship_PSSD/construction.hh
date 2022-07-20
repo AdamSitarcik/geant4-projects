@@ -12,6 +12,8 @@
 #include "G4PVPlacement.hh"
 #include "G4Colour.hh"
 
+#include "detector.hh"
+
 class MyDetectorConstruction : public G4VUserDetectorConstruction
 {
 public:
@@ -19,6 +21,8 @@ public:
   ~MyDetectorConstruction();
 
   virtual G4VPhysicalVolume *Construct();
+
+  virtual void ConstructSDandField();
 
 private:
   G4Material *vacuum, *detMat1, *detMat2;

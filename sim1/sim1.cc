@@ -11,7 +11,6 @@
 #include "physics.hh"
 #include "action.hh"
 
-
 int main(int argc, char** argv){
 	G4UIExecutive *ui = 0;
 
@@ -24,7 +23,6 @@ int main(int argc, char** argv){
 	runManager->SetUserInitialization(new MyDetectorConstruction());
 	runManager->SetUserInitialization(new MyPhysicsList());
 	runManager->SetUserInitialization(new MyActionInitialization());
-
 
 	if(argc == 1)
 	{

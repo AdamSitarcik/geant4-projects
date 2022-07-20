@@ -21,7 +21,6 @@ file(GLOB DATA_FILES
 
 file(COPY ${DATA_FILES} DESTINATION ${PROJECT_BINARY_DIR})
 
-
 add_executable(sim1 sim1.cc ${sources} ${headers})
 target_link_libraries(sim1 ${Geant4_LIBRARIES})
 

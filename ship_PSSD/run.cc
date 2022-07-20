@@ -1,6 +1,5 @@
 #include "run.hh"
 
-
 MyRunAction::MyRunAction()
 {
   G4AnalysisManager *man = G4AnalysisManager::Instance();
@@ -18,7 +17,11 @@ void MyRunAction::BeginRunAction(const G4Run* run)
 {
   G4AnalysisManager *man = G4AnalysisManager::Instance();
 
-  man->OpenFile("output.root");
+  G4int runID = run->GetRunID();
+  std::stringstream strRunID;
+  strRunID << runID;
+
+  man->OpenFile("outputs/output"+strRunID.str()+".root");
 }
 
 void MyRunAction::EndRunAction(const G4Run*)
