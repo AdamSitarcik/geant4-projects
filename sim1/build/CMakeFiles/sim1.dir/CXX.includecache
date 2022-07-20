@@ -22,6 +22,16 @@ CLHEP/Vector/ThreeVector.h
 CLHEP/Geometry/BasicVector3D.h
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/CLHEP/Geometry/BasicVector3D.h
 
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/Plane3D.h
+iosfwd
+-
+CLHEP/Geometry/Point3D.h
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/CLHEP/Geometry/Point3D.h
+CLHEP/Geometry/Normal3D.h
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/CLHEP/Geometry/Normal3D.h
+CLHEP/Geometry/Transform3D.h
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/CLHEP/Geometry/Transform3D.h
+
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/Point3D.h
 iosfwd
 -
@@ -446,6 +456,18 @@ CLHEP/Vector/ThreeVector.icc
 cmath
 -
 
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Vector/TwoVector.h
+iostream
+-
+CLHEP/Vector/ThreeVector.h
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Vector/CLHEP/Vector/ThreeVector.h
+CLHEP/Vector/TwoVector.icc
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Vector/CLHEP/Vector/TwoVector.icc
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Vector/TwoVector.icc
+cmath
+-
+
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AffineTransform.hh
 G4Types.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
@@ -499,6 +521,24 @@ globals.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
 array
 -
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnyMethod.hh
+functional
+-
+type_traits
+-
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnyType.hh
+algorithm
+-
+typeinfo
+-
+iostream
+-
+sstream
+-
+G4UIcommand.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UIcommand.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ApplicationState.hh
 
@@ -565,6 +605,40 @@ G4BlockingList.icc
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BlockingList.icc
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BlockingList.icc
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BoundingEnvelope.hh
+vector
+-
+geomdefs.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/geomdefs.hh
+G4ThreeVector.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ThreeVector.hh
+G4VoxelLimits.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VoxelLimits.hh
+G4Transform3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Transform3D.hh
+G4Point3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Point3D.hh
+G4Plane3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Plane3D.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Box.hh
+G4GeomTypes.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomTypes.hh
+G4UBox.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UBox.hh
+G4CSGSolid.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4CSGSolid.hh
+G4Polyhedron.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Polyhedron.hh
+G4Box.icc
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Box.icc
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Box.icc
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4CSGSolid.hh
+G4VSolid.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VSolid.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ClassificationOfNewTrack.hh
 
@@ -826,6 +900,24 @@ G4GenericFileManager.icc
 G4HnInformation.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnInformation.hh
 
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericMessenger.hh
+G4UImessenger.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UImessenger.hh
+G4UIcommand.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UIcommand.hh
+G4AnyType.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnyType.hh
+G4AnyMethod.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnyMethod.hh
+G4ApplicationState.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ApplicationState.hh
+map
+-
+vector
+-
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomConfig.hh
+
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomSplitter.hh
 globals.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
@@ -833,6 +925,10 @@ geomwdefs.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/geomwdefs.hh
 G4AutoLock.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AutoLock.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomTypes.hh
+G4GeomConfig.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomConfig.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GlobalConfig.hh
 
@@ -923,6 +1019,14 @@ vector
 -
 string_view
 -
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ICRU90StoppingData.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4Material.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Material.hh
+G4PhysicsFreeVector.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsFreeVector.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonisParamElm.hh
 G4ios.hh
@@ -1156,9 +1260,59 @@ G4Navigator.icc
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Navigator.icc
 
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NistElementBuilder.hh
+vector
+-
+CLHEP/Units/PhysicalConstants.h
+-
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4Element.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Element.hh
+G4Threading.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Threading.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NistManager.hh
+vector
+-
+CLHEP/Units/PhysicalConstants.h
+-
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4Material.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Material.hh
+G4NistElementBuilder.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NistElementBuilder.hh
+G4NistMaterialBuilder.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NistMaterialBuilder.hh
+G4ICRU90StoppingData.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ICRU90StoppingData.hh
+G4Pow.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Pow.hh
+G4Threading.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Threading.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NistMaterialBuilder.hh
+vector
+-
+CLHEP/Units/PhysicalConstants.h
+-
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4Material.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Material.hh
+G4Threading.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Threading.hh
+
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NoProcess.hh
 G4VProcess.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VProcess.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Normal3D.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+CLHEP/Geometry/Normal3D.h
+-
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NormalNavigation.hh
 iomanip
@@ -1257,6 +1411,12 @@ pwdefs.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/pwdefs.hh
 G4AutoLock.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AutoLock.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PVPlacement.hh
+G4VPhysicalVolume.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VPhysicalVolume.hh
+G4Transform3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Transform3D.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParameterisedNavigation.hh
 G4Types.hh
@@ -1401,6 +1561,40 @@ G4PhysicsVector.icc
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsVector.icc
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsVectorType.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Plane3D.hh
+G4Normal3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Normal3D.hh
+G4Point3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Point3D.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+CLHEP/Geometry/Plane3D.h
+-
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Point3D.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+CLHEP/Geometry/Point3D.h
+-
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Polyhedron.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+HepPolyhedron.h
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/HepPolyhedron.h
+G4Visible.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Visible.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Pow.hh
+G4DataVector.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4DataVector.hh
+G4Exp.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Exp.hh
+G4Log.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Log.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PrimaryParticle.hh
 globals.hh
@@ -1577,6 +1771,14 @@ globals.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
 CLHEP/Vector/Rotation.h
 -
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Run.hh
+vector
+-
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4Profiler.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RunManager.hh
 algorithm
@@ -2056,6 +2258,12 @@ globals.hh
 CLHEP/Geometry/Transform3D.h
 -
 
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4TwoVector.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+CLHEP/Vector/TwoVector.h
+-
+
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
 G4GlobalConfig.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GlobalConfig.hh
@@ -2063,6 +2271,40 @@ complex
 -
 tls.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tls.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UAdapter.hh
+G4ThreeVector.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ThreeVector.hh
+G4VSolid.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VSolid.hh
+G4AffineTransform.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AffineTransform.hh
+G4VoxelLimits.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VoxelLimits.hh
+G4VGraphicsScene.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VGraphicsScene.hh
+G4Polyhedron.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Polyhedron.hh
+G4VisExtent.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VisExtent.hh
+G4BoundingEnvelope.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BoundingEnvelope.hh
+G4AutoLock.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AutoLock.hh
+G4GeomTypes.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomTypes.hh
+VecGeom/base/Global.h
+-
+VecGeom/base/Vector3D.h
+-
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UBox.hh
+G4UAdapter.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UAdapter.hh
+VecGeom/volumes/UnplacedBox.h
+-
+G4Polyhedron.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Polyhedron.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UIcommand.hh
 vector
@@ -2099,6 +2341,12 @@ G4UItokenNum.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UItokenNum.hh
 globals.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserEventAction.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserRunAction.hh
+G4Types.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserStackingAction.hh
 G4ClassificationOfNewTrack.hh
@@ -2177,6 +2425,12 @@ memory
 -
 string_view
 -
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VGraphicsScene.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4Transform3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Transform3D.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VH1Manager.hh
 globals.hh
@@ -2396,6 +2650,12 @@ globals.hh
 G4ThreeVector.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ThreeVector.hh
 
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VUserDetectorConstruction.hh
+vector
+-
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VUserEventInformation.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VUserTrackInformation.hh
@@ -2405,6 +2665,38 @@ globals.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VVolumeMaterialScanner.hh
 G4Types.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VisExtent.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4Point3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Point3D.hh
+G4Transform3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Transform3D.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Visible.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+iostream
+-
+G4Visible.icc
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Visible.icc
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Visible.icc
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VoxelLimits.hh
+G4Types.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
+geomdefs.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/geomdefs.hh
+G4ThreeVector.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ThreeVector.hh
+assert.h
+-
+G4VoxelLimits.icc
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VoxelLimits.icc
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VoxelLimits.icc
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VoxelNavigation.hh
 geomdefs.hh
@@ -2445,6 +2737,20 @@ G4Types.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
 iostream
 -
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/HepPolyhedron.h
+vector
+-
+G4Types.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
+G4TwoVector.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4TwoVector.hh
+G4Point3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Point3D.hh
+G4Normal3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Normal3D.hh
+G4Transform3D.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Transform3D.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Globals.hh
 algorithm
@@ -2706,7 +3012,29 @@ G4Types.hh
 G4Types.hh
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
 
-/home/adam/skola/phd/geant4/sim1/detector.cc
+/home/adam/skola/phd/geant4/sim1/construction.cc
+construction.hh
+/home/adam/skola/phd/geant4/sim1/construction.hh
+
+/home/adam/skola/phd/geant4/sim1/construction.hh
+G4SystemOfUnits.hh
+/home/adam/skola/phd/geant4/sim1/G4SystemOfUnits.hh
+G4VUserDetectorConstruction.hh
+/home/adam/skola/phd/geant4/sim1/G4VUserDetectorConstruction.hh
+G4Box.hh
+/home/adam/skola/phd/geant4/sim1/G4Box.hh
+G4LogicalVolume.hh
+/home/adam/skola/phd/geant4/sim1/G4LogicalVolume.hh
+G4PVPlacement.hh
+/home/adam/skola/phd/geant4/sim1/G4PVPlacement.hh
+G4VPhysicalVolume.hh
+/home/adam/skola/phd/geant4/sim1/G4VPhysicalVolume.hh
+G4NistManager.hh
+/home/adam/skola/phd/geant4/sim1/G4NistManager.hh
+G4MaterialPropertiesTable.hh
+/home/adam/skola/phd/geant4/sim1/G4MaterialPropertiesTable.hh
+G4GenericMessenger.hh
+/home/adam/skola/phd/geant4/sim1/G4GenericMessenger.hh
 detector.hh
 /home/adam/skola/phd/geant4/sim1/detector.hh
 
@@ -2721,4 +3049,26 @@ G4SystemOfUnits.hh
 /home/adam/skola/phd/geant4/sim1/G4SystemOfUnits.hh
 G4PhysicsOrderedFreeVector.hh
 /home/adam/skola/phd/geant4/sim1/G4PhysicsOrderedFreeVector.hh
+
+/home/adam/skola/phd/geant4/sim1/event.cc
+event.hh
+/home/adam/skola/phd/geant4/sim1/event.hh
+
+/home/adam/skola/phd/geant4/sim1/event.hh
+G4UserEventAction.hh
+/home/adam/skola/phd/geant4/sim1/G4UserEventAction.hh
+G4Event.hh
+/home/adam/skola/phd/geant4/sim1/G4Event.hh
+G4AnalysisManager.hh
+/home/adam/skola/phd/geant4/sim1/G4AnalysisManager.hh
+run.hh
+/home/adam/skola/phd/geant4/sim1/run.hh
+
+/home/adam/skola/phd/geant4/sim1/run.hh
+G4UserRunAction.hh
+/home/adam/skola/phd/geant4/sim1/G4UserRunAction.hh
+G4AnalysisManager.hh
+/home/adam/skola/phd/geant4/sim1/G4AnalysisManager.hh
+G4Run.hh
+/home/adam/skola/phd/geant4/sim1/G4Run.hh
 

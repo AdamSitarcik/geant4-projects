@@ -2,8 +2,8 @@
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
-	nCols = 50;
-	nRows = 50;
+	nCols = 20;
+	nRows = 20;
 	xWorld = 0.5*m;
 	yWorld = 0.5*m;
 	zWorld = 0.5*m;
@@ -31,6 +31,7 @@ void MyDetectorConstruction::DefineMaterial()
 
 	worldMat = nist->FindOrBuildMaterial("G4_AIR");
 	shapeMat = nist->FindOrBuildMaterial("G4_WATER");
+	detMat = nist->FindOrBuildMaterial("G4_Ar");
 
 	SiO2 = new G4Material("SiO2", 2.201*g/cm3, 2);
 	SiO2->AddElement(nist->FindOrBuildElement("Si"), 1);
@@ -74,13 +75,16 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	logicRadiator = new G4LogicalVolume(solidRadiator, Aerogel, "logicalRadiator");
 	physRadiator = new G4PVPlacement(0, G4ThreeVector(0.,0.,0.1*m), logicRadiator, "physRadiator", logicWorld, false, 0, true);
 
+
 	solidDetector = new G4Box("solidDetector", xWorld/nRows, yWorld/nCols, zDetector);
-	logicDetector = new G4LogicalVolume(solidDetector, worldMat, "logicalDetector");
+	logicDetector = new G4LogicalVolume(solidDetector, detMat, "logicalDetector");
 	for(G4int i=0; i<nRows; i++){
 		for(G4int j=0; j<nCols;j++){
 			physDetector = new G4PVPlacement(0, G4ThreeVector(-xWorld+(i*m+xWorld)/nRows, -yWorld+(j*m+yWorld)/nCols, zWorld-zRadiator), logicDetector, "physDetector", logicWorld, false, j+i*nCols, true);
 		}
 	}
+	fScoringVolume = logicDetector;
+
 
 	return physWorld;
 }

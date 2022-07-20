@@ -128,9 +128,22 @@ CMakeFiles/sim1.dir/detector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim1.dir/detector.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/sim1/detector.cc -o CMakeFiles/sim1.dir/detector.cc.s
 
+CMakeFiles/sim1.dir/event.cc.o: CMakeFiles/sim1.dir/flags.make
+CMakeFiles/sim1.dir/event.cc.o: ../event.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sim1.dir/event.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim1.dir/event.cc.o -c /home/adam/skola/phd/geant4/sim1/event.cc
+
+CMakeFiles/sim1.dir/event.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim1.dir/event.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/skola/phd/geant4/sim1/event.cc > CMakeFiles/sim1.dir/event.cc.i
+
+CMakeFiles/sim1.dir/event.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim1.dir/event.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/sim1/event.cc -o CMakeFiles/sim1.dir/event.cc.s
+
 CMakeFiles/sim1.dir/generator.cc.o: CMakeFiles/sim1.dir/flags.make
 CMakeFiles/sim1.dir/generator.cc.o: ../generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sim1.dir/generator.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sim1.dir/generator.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim1.dir/generator.cc.o -c /home/adam/skola/phd/geant4/sim1/generator.cc
 
 CMakeFiles/sim1.dir/generator.cc.i: cmake_force
@@ -143,7 +156,7 @@ CMakeFiles/sim1.dir/generator.cc.s: cmake_force
 
 CMakeFiles/sim1.dir/physics.cc.o: CMakeFiles/sim1.dir/flags.make
 CMakeFiles/sim1.dir/physics.cc.o: ../physics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sim1.dir/physics.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sim1.dir/physics.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim1.dir/physics.cc.o -c /home/adam/skola/phd/geant4/sim1/physics.cc
 
 CMakeFiles/sim1.dir/physics.cc.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/sim1.dir/physics.cc.s: cmake_force
 
 CMakeFiles/sim1.dir/run.cc.o: CMakeFiles/sim1.dir/flags.make
 CMakeFiles/sim1.dir/run.cc.o: ../run.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sim1.dir/run.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/sim1.dir/run.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim1.dir/run.cc.o -c /home/adam/skola/phd/geant4/sim1/run.cc
 
 CMakeFiles/sim1.dir/run.cc.i: cmake_force
@@ -167,15 +180,30 @@ CMakeFiles/sim1.dir/run.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim1.dir/run.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/sim1/run.cc -o CMakeFiles/sim1.dir/run.cc.s
 
+CMakeFiles/sim1.dir/stepping.cc.o: CMakeFiles/sim1.dir/flags.make
+CMakeFiles/sim1.dir/stepping.cc.o: ../stepping.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/sim1.dir/stepping.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim1.dir/stepping.cc.o -c /home/adam/skola/phd/geant4/sim1/stepping.cc
+
+CMakeFiles/sim1.dir/stepping.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim1.dir/stepping.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/skola/phd/geant4/sim1/stepping.cc > CMakeFiles/sim1.dir/stepping.cc.i
+
+CMakeFiles/sim1.dir/stepping.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim1.dir/stepping.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/sim1/stepping.cc -o CMakeFiles/sim1.dir/stepping.cc.s
+
 # Object files for target sim1
 sim1_OBJECTS = \
 "CMakeFiles/sim1.dir/sim1.cc.o" \
 "CMakeFiles/sim1.dir/action.cc.o" \
 "CMakeFiles/sim1.dir/construction.cc.o" \
 "CMakeFiles/sim1.dir/detector.cc.o" \
+"CMakeFiles/sim1.dir/event.cc.o" \
 "CMakeFiles/sim1.dir/generator.cc.o" \
 "CMakeFiles/sim1.dir/physics.cc.o" \
-"CMakeFiles/sim1.dir/run.cc.o"
+"CMakeFiles/sim1.dir/run.cc.o" \
+"CMakeFiles/sim1.dir/stepping.cc.o"
 
 # External object files for target sim1
 sim1_EXTERNAL_OBJECTS =
@@ -184,9 +212,11 @@ sim1: CMakeFiles/sim1.dir/sim1.cc.o
 sim1: CMakeFiles/sim1.dir/action.cc.o
 sim1: CMakeFiles/sim1.dir/construction.cc.o
 sim1: CMakeFiles/sim1.dir/detector.cc.o
+sim1: CMakeFiles/sim1.dir/event.cc.o
 sim1: CMakeFiles/sim1.dir/generator.cc.o
 sim1: CMakeFiles/sim1.dir/physics.cc.o
 sim1: CMakeFiles/sim1.dir/run.cc.o
+sim1: CMakeFiles/sim1.dir/stepping.cc.o
 sim1: CMakeFiles/sim1.dir/build.make
 sim1: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4Tree.so
 sim1: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4FR.so
@@ -236,7 +266,7 @@ sim1: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4global.so
 sim1: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4clhep.so
 sim1: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4ptl.so.0.0.2
 sim1: CMakeFiles/sim1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable sim1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/skola/phd/geant4/sim1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable sim1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sim1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
