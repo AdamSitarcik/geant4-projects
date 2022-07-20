@@ -3,7 +3,7 @@
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
   fElectronParticleGun = new G4ParticleGun(1);
-  fElectronParticleGun->SetParticleEnergy(100.*keV);
+  fElectronParticleGun->SetParticleEnergy(300.*keV);
 
   fAlphaParticleGun = new G4ParticleGun(1);
   fAlphaParticleGun->SetParticleEnergy(8.*MeV);
@@ -34,7 +34,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirYal = G4UniformRand()-0.5;
   G4double dirZal = G4UniformRand()-0.5;
 
-  G4ThreeVector posGun(0., 0., -6.*mm);
+  G4ThreeVector posGun(0., 0., -6.*um);
   // G4ThreeVector dirGun(0., 0., -1.);
   // G4ThreeVector dirGun(G4UniformRand()-0.5, G4UniformRand()-0.5, -G4UniformRand()-0.5);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
