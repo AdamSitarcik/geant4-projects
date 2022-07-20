@@ -10,7 +10,6 @@ file(GLOB sources ${PROJECT_SOURCE_DIR}/*.cc)
 file(GLOB headers ${PROJECT_SOURCE_DIR}/*.hh)
 
 file(GLOB MACROS "*.mac")
-
 file(COPY ${MACROS} DESTINATION ${PROJECT_BINARY_DIR})
 
 add_executable(pssd ship_pssd.cc ${sources} ${headers})

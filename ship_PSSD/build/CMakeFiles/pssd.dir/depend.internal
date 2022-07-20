@@ -55,11 +55,33 @@ CMakeFiles/pssd.dir/action.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Allocator.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AllocatorPool.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisManagerState.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisUtilities.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisVerbose.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ApplicationState.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AutoLock.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BaseAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BaseFileManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BinScheme.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4EnvironmentUtils.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Exception.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ExceptionSeverity.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Fcn.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericAnalysisManager.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericFileManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericFileManager.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GlobalConfig.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4H1ToolsManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4H2ToolsManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4H3ToolsManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnInformation.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NtupleBookingManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NtupleBookingManager.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4P1ToolsManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4P2ToolsManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PDefManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleDefinition.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleDefinition.icc
@@ -70,25 +92,78 @@ CMakeFiles/pssd.dir/action.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleTableIterator.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PrimaryParticle.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PrimaryVertex.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Run.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4SystemOfUnits.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THnManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THnManager.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Threading.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ThreeVector.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ToolsAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ToolsAnalysisManager.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ToolsAnalysisMessenger.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Types.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UIcommand.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UIdirectory.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UImessenger.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UIparameter.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UItokenNum.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserRunAction.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VAnalysisManager.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VExceptionHandler.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VFileManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VH1Manager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VH2Manager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VH3Manager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VNtupleManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VP1Manager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VP2Manager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VPrimaryGenerator.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VTHnFileManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VUserActionInitialization.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ios.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Globals.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Types.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/PTL/Utility.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/Randomize.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/pwdefs.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/templates.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tls.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/cid
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/cids
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/eqT
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/forit
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/axes
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/axis
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/b1
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/b2
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/b3
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/base_histo
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h1
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h1d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h2
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h2d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h3
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h3d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/histo_data
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p1
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p1d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p2
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p2d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/profile_data
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/mem
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/ntuple_booking
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/typedefs
  /home/adam/skola/phd/geant4/ship_PSSD/action.cc
  /home/adam/skola/phd/geant4/ship_PSSD/action.hh
  /home/adam/skola/phd/geant4/ship_PSSD/generator.hh
+ /home/adam/skola/phd/geant4/ship_PSSD/run.hh
 CMakeFiles/pssd.dir/construction.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -833,11 +908,18 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AffineTransform.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Allocator.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AllocatorPool.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisManagerState.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisUtilities.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AnalysisVerbose.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ApplicationState.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AutoLock.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AuxiliaryNavServices.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4AuxiliaryNavServices.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Backtrace.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BaseAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BaseFileManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BinScheme.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BlockingList.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BlockingList.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4BoundingEnvelope.hh
@@ -868,6 +950,7 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ExceptionSeverity.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Exp.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4FastVector.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Fcn.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ForceCondition.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GMocrenFile.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GPILSelection.hh
@@ -875,15 +958,24 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GRSSolid.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GRSVolume.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GRSVolume.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericAnalysisManager.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericFileManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GenericFileManager.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomConfig.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomSplitter.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GeomTypes.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GlobalConfig.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GraphicsSystemList.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4H1ToolsManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4H2ToolsManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4H3ToolsManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HCofThisEvent.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HepRepFile.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HepRepFileXMLWriter.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HitFilterFactories.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnInformation.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ICRU90StoppingData.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonisParamElm.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonisParamMat.hh
@@ -919,11 +1011,15 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Normal3D.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NormalNavigation.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NormalNavigation.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NtupleBookingManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NtupleBookingManager.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4NullModel.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4OpenGLImmediateQt.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4OpenGLQt.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4OpenGLStoredQt.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4OrderedTable.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4P1ToolsManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4P2ToolsManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PDefManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PVPlacement.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParameterisedNavigation.hh
@@ -972,6 +1068,7 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ReplicaNavigation.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ReplicaNavigation.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RotationMatrix.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Run.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RunManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RunManagerKernel.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4SandiaTable.hh
@@ -1000,9 +1097,14 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4SystemOfUnits.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THitsCollection.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THitsMap.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THnManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THnManager.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ThreadLocalSingleton.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Threading.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ThreeVector.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ToolsAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ToolsAnalysisManager.icc
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ToolsAnalysisMessenger.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4TouchableHandle.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4TouchableHistory.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4TouchableHistory.icc
@@ -1035,16 +1137,23 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UIparameter.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UItokenNum.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UTubs.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserRunAction.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserStackingAction.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserSteppingAction.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4UserTrackingAction.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VAnalysisManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VAnalysisManager.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VDigi.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VDigiCollection.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VExceptionHandler.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VExternalNavigation.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VFileManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VFilter.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VGraphicsScene.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VGraphicsSystem.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VH1Manager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VH2Manager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VH3Manager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VHit.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VHitsCollection.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VMarker.hh
@@ -1053,6 +1162,9 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VModel.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VModelFactory.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VModularPhysicsList.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VNtupleManager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VP1Manager.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VP2Manager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VPVParameterisation.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VParticleChange.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VParticleChange.icc
@@ -1068,6 +1180,7 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VSolid.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VStateDependent.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VSteppingVerbose.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VTHnFileManager.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VTouchable.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VTouchable.icc
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4VTrajectory.hh
@@ -1118,10 +1231,36 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/rundefs.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/templates.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tls.hh
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/cid
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/cids
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/eqT
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/forit
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/axes
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/axis
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/b1
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/b2
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/b3
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/base_histo
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h1
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h1d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h2
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h2d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h3
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/h3d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/histo_data
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p1
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p1d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p2
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/p2d
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/histo/profile_data
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/mem
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/ntuple_booking
+ /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/tools/typedefs
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/trkdefs.hh
  /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/trkgdefs.hh
  /home/adam/skola/phd/geant4/ship_PSSD/action.hh
  /home/adam/skola/phd/geant4/ship_PSSD/construction.hh
  /home/adam/skola/phd/geant4/ship_PSSD/generator.hh
  /home/adam/skola/phd/geant4/ship_PSSD/physics.hh
+ /home/adam/skola/phd/geant4/ship_PSSD/run.hh
  /home/adam/skola/phd/geant4/ship_PSSD/ship_pssd.cc

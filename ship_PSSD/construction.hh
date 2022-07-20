@@ -21,7 +21,15 @@ public:
   virtual G4VPhysicalVolume *Construct();
 
 private:
-  G4LogicalVolume *logicDetector_PSSD;
-  G4LogicalVolume *logicDetector_Ge;
+  G4Material *vacuum, *detMat1, *detMat2;
+  G4Box *solidWorld, *solidDetector_PSSD;
+  G4Tubs *solidDetector_Ge;
+  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge;
+  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge;
+
+  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld;
+
+  void DefineMaterial();
+
 };
 #endif

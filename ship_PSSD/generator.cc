@@ -2,34 +2,53 @@
 
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
-  fParticleGun = new G4ParticleGun(1);
-  fParticleGun->SetParticleEnergy(100.*MeV);
+  fElectronParticleGun = new G4ParticleGun(1);
+  fElectronParticleGun->SetParticleEnergy(100.*keV);
+
+  fAlphaParticleGun = new G4ParticleGun(1);
+  fAlphaParticleGun->SetParticleEnergy(8.*MeV);
 
 }
 
 MyPrimaryGenerator::~MyPrimaryGenerator()
 {
-  delete fParticleGun;
+  delete fElectronParticleGun;
+  delete fAlphaParticleGun;
 }
 
 void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 {
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
-  G4String particleName = "e-";
-  G4ParticleDefinition *particle = particleTable->FindParticle(particleName);
 
-  G4double dirX = G4UniformRand()-0.5;
-  G4double dirY = G4UniformRand()-0.5;
-  G4double dirZ = G4UniformRand()-0.5;
+  G4String particleName1 = "e-";
+  G4ParticleDefinition *electron = particleTable->FindParticle(particleName1);
 
-  G4ThreeVector posGun(0., 0., -6.3*um);
+  G4String particleName2 = "alpha";
+  G4ParticleDefinition *alpha = particleTable->FindParticle(particleName2);
+
+  G4double dirXel = G4UniformRand()-0.5;
+  G4double dirYel = G4UniformRand()-0.5;
+  G4double dirZel = G4UniformRand()-0.5;
+
+  G4double dirXal = G4UniformRand()-0.5;
+  G4double dirYal = G4UniformRand()-0.5;
+  G4double dirZal = G4UniformRand()-0.5;
+
+  G4ThreeVector posGun(0., 0., -6.*mm);
   // G4ThreeVector dirGun(0., 0., -1.);
   // G4ThreeVector dirGun(G4UniformRand()-0.5, G4UniformRand()-0.5, -G4UniformRand()-0.5);
-  G4ThreeVector dirGun(dirX, dirY, -dirZ);
+  G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
+  G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
 
-  fParticleGun->SetParticlePosition(posGun);
-  fParticleGun->SetParticleMomentumDirection(dirGun);
-  fParticleGun->SetParticleDefinition(particle);
+  fElectronParticleGun->SetParticlePosition(posGun);
+  fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
+  fElectronParticleGun->SetParticleDefinition(electron);
 
-  fParticleGun->GeneratePrimaryVertex(anEvent);
+  fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+
+  fAlphaParticleGun->SetParticlePosition(posGun);
+  fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
+  fAlphaParticleGun->SetParticleDefinition(alpha);
+
+  fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
 }
