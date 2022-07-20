@@ -15,6 +15,13 @@ file(GLOB MACROS
 
 file(COPY ${MACROS} DESTINATION ${PROJECT_BINARY_DIR})
 
+file(GLOB DATA_FILES
+  "*.dat"
+)
+
+file(COPY ${DATA_FILES} DESTINATION ${PROJECT_BINARY_DIR})
+
+
 add_executable(sim1 sim1.cc ${sources} ${headers})
 target_link_libraries(sim1 ${Geant4_LIBRARIES})
 

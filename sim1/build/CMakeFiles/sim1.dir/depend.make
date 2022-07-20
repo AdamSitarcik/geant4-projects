@@ -351,6 +351,7 @@ CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2
 CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleTableIterator.hh
 CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsFreeVector.hh
 CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsModelCatalog.hh
+CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
 CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsTable.hh
 CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsTable.icc
 CMakeFiles/sim1.dir/construction.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsVector.hh
@@ -689,6 +690,7 @@ CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-ins
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleTableIterator.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsFreeVector.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsModelCatalog.hh
+CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsTable.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsTable.icc
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsVector.hh
@@ -733,6 +735,7 @@ CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-ins
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4SteppingManager.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4String.icc
+CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4SystemOfUnits.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THnManager.hh
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4THnManager.icc
 CMakeFiles/sim1.dir/detector.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Threading.hh
@@ -1236,6 +1239,8 @@ CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4LogicalVolume.icc
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4LorentzVector.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4MCCIndexConversionTable.hh
+CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4MTBarrier.hh
+CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4MTRunManager.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Material.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4MaterialCutsCouple.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4MaterialPropertiesIndex.hh
@@ -1290,6 +1295,7 @@ CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsListHelper.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsListOrderingParameter.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsModelCatalog.hh
+CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsTable.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsTable.icc
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PhysicsVector.hh
@@ -1311,6 +1317,7 @@ CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ProductionCutsTable.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Profiler.icc
+CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RNGHelper.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RayTracer.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4RayTracerX.hh
 CMakeFiles/sim1.dir/sim1.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ReferenceCountedHandle.hh
