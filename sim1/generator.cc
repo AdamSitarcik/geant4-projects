@@ -5,7 +5,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
   fParticleGun = new G4ParticleGun(1);
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
-  G4String particleName = "proton";
+  G4String particleName = "e-";
   G4ParticleDefinition *particle = particleTable->FindParticle(particleName);
 
   G4double randMomX = G4UniformRand()-0.5;
