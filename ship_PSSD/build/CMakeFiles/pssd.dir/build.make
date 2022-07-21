@@ -128,9 +128,22 @@ CMakeFiles/pssd.dir/detector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pssd.dir/detector.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/ship_PSSD/detector.cc -o CMakeFiles/pssd.dir/detector.cc.s
 
+CMakeFiles/pssd.dir/event.cc.o: CMakeFiles/pssd.dir/flags.make
+CMakeFiles/pssd.dir/event.cc.o: ../event.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pssd.dir/event.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pssd.dir/event.cc.o -c /home/adam/skola/phd/geant4/ship_PSSD/event.cc
+
+CMakeFiles/pssd.dir/event.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pssd.dir/event.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/skola/phd/geant4/ship_PSSD/event.cc > CMakeFiles/pssd.dir/event.cc.i
+
+CMakeFiles/pssd.dir/event.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pssd.dir/event.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/ship_PSSD/event.cc -o CMakeFiles/pssd.dir/event.cc.s
+
 CMakeFiles/pssd.dir/generator.cc.o: CMakeFiles/pssd.dir/flags.make
 CMakeFiles/pssd.dir/generator.cc.o: ../generator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pssd.dir/generator.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pssd.dir/generator.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pssd.dir/generator.cc.o -c /home/adam/skola/phd/geant4/ship_PSSD/generator.cc
 
 CMakeFiles/pssd.dir/generator.cc.i: cmake_force
@@ -143,7 +156,7 @@ CMakeFiles/pssd.dir/generator.cc.s: cmake_force
 
 CMakeFiles/pssd.dir/physics.cc.o: CMakeFiles/pssd.dir/flags.make
 CMakeFiles/pssd.dir/physics.cc.o: ../physics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pssd.dir/physics.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pssd.dir/physics.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pssd.dir/physics.cc.o -c /home/adam/skola/phd/geant4/ship_PSSD/physics.cc
 
 CMakeFiles/pssd.dir/physics.cc.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/pssd.dir/physics.cc.s: cmake_force
 
 CMakeFiles/pssd.dir/run.cc.o: CMakeFiles/pssd.dir/flags.make
 CMakeFiles/pssd.dir/run.cc.o: ../run.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pssd.dir/run.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pssd.dir/run.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pssd.dir/run.cc.o -c /home/adam/skola/phd/geant4/ship_PSSD/run.cc
 
 CMakeFiles/pssd.dir/run.cc.i: cmake_force
@@ -167,15 +180,30 @@ CMakeFiles/pssd.dir/run.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pssd.dir/run.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/ship_PSSD/run.cc -o CMakeFiles/pssd.dir/run.cc.s
 
+CMakeFiles/pssd.dir/stepping.cc.o: CMakeFiles/pssd.dir/flags.make
+CMakeFiles/pssd.dir/stepping.cc.o: ../stepping.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/pssd.dir/stepping.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pssd.dir/stepping.cc.o -c /home/adam/skola/phd/geant4/ship_PSSD/stepping.cc
+
+CMakeFiles/pssd.dir/stepping.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pssd.dir/stepping.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/skola/phd/geant4/ship_PSSD/stepping.cc > CMakeFiles/pssd.dir/stepping.cc.i
+
+CMakeFiles/pssd.dir/stepping.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pssd.dir/stepping.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/skola/phd/geant4/ship_PSSD/stepping.cc -o CMakeFiles/pssd.dir/stepping.cc.s
+
 # Object files for target pssd
 pssd_OBJECTS = \
 "CMakeFiles/pssd.dir/ship_pssd.cc.o" \
 "CMakeFiles/pssd.dir/action.cc.o" \
 "CMakeFiles/pssd.dir/construction.cc.o" \
 "CMakeFiles/pssd.dir/detector.cc.o" \
+"CMakeFiles/pssd.dir/event.cc.o" \
 "CMakeFiles/pssd.dir/generator.cc.o" \
 "CMakeFiles/pssd.dir/physics.cc.o" \
-"CMakeFiles/pssd.dir/run.cc.o"
+"CMakeFiles/pssd.dir/run.cc.o" \
+"CMakeFiles/pssd.dir/stepping.cc.o"
 
 # External object files for target pssd
 pssd_EXTERNAL_OBJECTS =
@@ -184,9 +212,11 @@ pssd: CMakeFiles/pssd.dir/ship_pssd.cc.o
 pssd: CMakeFiles/pssd.dir/action.cc.o
 pssd: CMakeFiles/pssd.dir/construction.cc.o
 pssd: CMakeFiles/pssd.dir/detector.cc.o
+pssd: CMakeFiles/pssd.dir/event.cc.o
 pssd: CMakeFiles/pssd.dir/generator.cc.o
 pssd: CMakeFiles/pssd.dir/physics.cc.o
 pssd: CMakeFiles/pssd.dir/run.cc.o
+pssd: CMakeFiles/pssd.dir/stepping.cc.o
 pssd: CMakeFiles/pssd.dir/build.make
 pssd: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4Tree.so
 pssd: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4FR.so
@@ -236,7 +266,7 @@ pssd: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4global.so
 pssd: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4clhep.so
 pssd: /home/adam/programs/geant4/geant4-v11.0.2-install/lib/libG4ptl.so.0.0.2
 pssd: CMakeFiles/pssd.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable pssd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable pssd"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pssd.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

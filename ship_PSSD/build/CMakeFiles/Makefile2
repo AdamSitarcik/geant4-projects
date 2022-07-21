@@ -99,7 +99,7 @@ CMakeFiles/SHIP_PSSD_Detector.dir/all: CMakeFiles/pssd.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SHIP_PSSD_Detector.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SHIP_PSSD_Detector.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles 0
 .PHONY : CMakeFiles/SHIP_PSSD_Detector.dir/rule
@@ -121,12 +121,12 @@ CMakeFiles/SHIP_PSSD_Detector.dir/clean:
 CMakeFiles/pssd.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pssd.dir/build.make CMakeFiles/pssd.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pssd.dir/build.make CMakeFiles/pssd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target pssd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target pssd"
 .PHONY : CMakeFiles/pssd.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pssd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pssd.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/skola/phd/geant4/ship_PSSD/build/CMakeFiles 0
 .PHONY : CMakeFiles/pssd.dir/rule

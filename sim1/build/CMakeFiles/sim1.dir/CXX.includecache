@@ -3862,6 +3862,10 @@ G4SystemOfUnits.hh
 G4PhysicsOrderedFreeVector.hh
 /home/adam/skola/phd/geant4/sim1/G4PhysicsOrderedFreeVector.hh
 
+/home/adam/skola/phd/geant4/sim1/event.cc
+event.hh
+/home/adam/skola/phd/geant4/sim1/event.hh
+
 /home/adam/skola/phd/geant4/sim1/event.hh
 G4UserEventAction.hh
 /home/adam/skola/phd/geant4/sim1/G4UserEventAction.hh
@@ -3921,6 +3925,10 @@ physics.hh
 /home/adam/skola/phd/geant4/sim1/physics.hh
 action.hh
 /home/adam/skola/phd/geant4/sim1/action.hh
+
+/home/adam/skola/phd/geant4/sim1/stepping.cc
+stepping.hh
+/home/adam/skola/phd/geant4/sim1/stepping.hh
 
 /home/adam/skola/phd/geant4/sim1/stepping.hh
 G4UserSteppingAction.hh
