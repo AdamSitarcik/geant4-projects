@@ -34,12 +34,12 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirYal = G4UniformRand()-0.5;
   G4double dirZal = G4UniformRand()-0.5;
 
-  G4ThreeVector posGun(0., 0., -6.*um);
+  G4ThreeVector posGun(0., 0., 0.);//-6.*um);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
   // G4ThreeVector dirElGun(0., 0., -1.);
 
-  G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
-  // G4ThreeVector dirAlGun(0., 0., -1.);
+  // G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
+  G4ThreeVector dirAlGun(0., 0., -1.);
 
 
   fElectronParticleGun->SetParticlePosition(posGun);

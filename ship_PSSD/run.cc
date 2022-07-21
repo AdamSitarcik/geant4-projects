@@ -10,12 +10,11 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 {
   G4AnalysisManager *man = G4AnalysisManager::Instance();
 
-  // G4int runID = run->GetRunID();
-  // std::stringstream strRunID;
-  // strRunID << runID;
-  //
-  // man->OpenFile("outputs/output"+strRunID.str()+".root");
-  man->OpenFile("outputs/output.root");
+  G4int runID = run->GetRunID();
+  std::stringstream strRunID;
+  strRunID << runID;
+
+  man->OpenFile("outputs/output"+strRunID.str()+".root");
 
   man->CreateNtuple("Hits", "Hits");
   man->CreateNtupleIColumn("fEvent");
