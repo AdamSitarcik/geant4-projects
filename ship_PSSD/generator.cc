@@ -35,20 +35,22 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirZal = G4UniformRand()-0.5;
 
   G4ThreeVector posGun(0., 0., -6.*um);
-  // G4ThreeVector dirGun(0., 0., -1.);
-  // G4ThreeVector dirGun(G4UniformRand()-0.5, G4UniformRand()-0.5, -G4UniformRand()-0.5);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
+  // G4ThreeVector dirElGun(0., 0., -1.);
+
   G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
+  // G4ThreeVector dirAlGun(0., 0., -1.);
+
 
   fElectronParticleGun->SetParticlePosition(posGun);
   fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
   fElectronParticleGun->SetParticleDefinition(electron);
 
-  fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+  // fElectronParticleGun->GeneratePrimaryVertex(anEvent);
 
   fAlphaParticleGun->SetParticlePosition(posGun);
   fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
   fAlphaParticleGun->SetParticleDefinition(alpha);
 
-  // fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
+  fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
 }

@@ -34,6 +34,5 @@ private:
   G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld;
 
   void DefineMaterial();
-
 };
 #endif
