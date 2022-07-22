@@ -18,6 +18,13 @@ MyDetectorConstruction::MyDetectorConstruction()
   mylarLength = 10*mm;
   mylarThickness = 1*um;
 
+  targetXY = 5*mm;
+  targetThickness = 1.47*um;
+
+  ionSourcePosition = 50.*mm;
+
+  carbonLayerThickness = 0.19*um;
+
   DefineMaterial();
 }
 
@@ -31,8 +38,13 @@ void MyDetectorConstruction::DefineMaterial()
   vacuum = nist->FindOrBuildMaterial("G4_Galactic");
   pssdMat = nist->FindOrBuildMaterial("G4_Si");
   detMat2 = nist->FindOrBuildMaterial("G4_Ge");
-  tofMat = nist->FindOrBuildMaterial("G4_C");
+  carbon = nist->FindOrBuildMaterial("G4_C");
   mylar = nist->FindOrBuildMaterial("G4_MYLAR");
+
+  targetMat = new G4Material("targetMat", 2.7133*g/cm3,2);
+  targetMat->AddElement(nist->FindOrBuildElement("Sm"),1);
+  targetMat->AddElement(nist->FindOrBuildElement("F"),3);
+
 }
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
@@ -46,10 +58,10 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
 
   solidTOF = new G4Box("solidTOF", tofWidth/2., tofLength/2., tofThickness/2.);
-  logicTOF = new G4LogicalVolume(solidTOF, tofMat, "logicTOF");
+  logicTOF = new G4LogicalVolume(solidTOF, carbon, "logicTOF");
   for(G4int i = 0; i<3; i++){
     for(G4int j=0; j<2; j++){
-      physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (15.+20*i+5*j)*mm), logicTOF, "physTOF", logicWorld, false, 0, true);
+      physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (15.+8*i+2*j)*mm), logicTOF, "physTOF", logicWorld, false, 0, true);
     }
   }
 
@@ -58,6 +70,14 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   for(G4int i=0; i<4; i++){
     physMylar = new G4PVPlacement(0, G4ThreeVector(0., 0., (5+2*i)*mm), logicMylar, "physMylar", logicWorld, false, 0, true);
   }
+
+  solidTarget = new G4Box("solidTarget", targetXY/2., targetXY/2., targetThickness/2.);
+  logicTarget = new G4LogicalVolume(solidTarget, targetMat, "logicTarget");
+  physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., 50.*mm), logicTarget, "physTarget", logicWorld, false, 0, true);
+
+  solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThickness/2.);
+  logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");
+  physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., ionSourcePosition-targetThickness/2.-carbonLayerThickness/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
 
   // solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0*mm, 35*mm, 140*mm/2, 0., 360*deg);
   // logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, detMat2, "logicDetector_Ge");

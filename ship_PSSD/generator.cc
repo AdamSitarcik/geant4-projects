@@ -38,14 +38,16 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirYal = G4UniformRand()-0.5;
   G4double dirZal = G4UniformRand()-0.5;
 
-  G4double dirXion = G4RandGauss::shoot(0,0.05);
-  G4double dirYion = G4RandGauss::shoot(0,0.05);
+  G4double dirXion = G4RandGauss::shoot(0,0.01);
+  G4double dirYion = G4RandGauss::shoot(0,0.01);
   G4double dirZion = -1;
+
+  G4double ionSourcePosition = 55.*mm;
 
   G4double alphaEnergy = G4RandGauss::shoot(7155,12);
 
-  G4ThreeVector posGun(0., 0., -G4RandGauss::shoot(4.6,0.1)*um);
-  G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, 40*mm);
+  G4ThreeVector posGun(0., 0., -G4RandGauss::shoot(4.3,0.1)*um);
+  G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, ionSourcePosition);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
   // G4ThreeVector dirElGun(0., 0., -1.);
 
@@ -58,7 +60,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fIonParticleGun->SetParticleMomentumDirection(dirIonGun);
   fIonParticleGun->SetParticleDefinition(ion);
   fIonParticleGun->SetParticleCharge(0.*eplus);
-  fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(47,3)*MeV);
+  fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(58,3)*MeV);
 
   // fIonParticleGun->GeneratePrimaryVertex(anEvent);
 
