@@ -25,13 +25,13 @@ public:
   virtual void ConstructSDandField();
 
 private:
-  G4Material *vacuum, *detMat1, *detMat2;
-  G4Box *solidWorld, *solidDetector_PSSD;
+  G4Material *vacuum, *pssdMat, *detMat2, *tofMat;
+  G4Box *solidWorld, *solidDetector_PSSD, *solidTOF;
   G4Tubs *solidDetector_Ge;
-  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge;
-  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge;
+  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicTOF;
+  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge, *physTOF;
 
-  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld;
+  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld, tofWidth, tofLength, tofThickness;
 
   void DefineMaterial();
 

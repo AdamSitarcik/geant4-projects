@@ -137,8 +137,10 @@ CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-insta
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnInformation.hh
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnManager.hh
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ICRU90StoppingData.hh
+CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonTable.hh
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonisParamElm.hh
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonisParamMat.hh
+CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Ions.hh
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Isotope.hh
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IsotopeVector.hh
 CMakeFiles/pssd.dir/action.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Log.hh
@@ -1218,6 +1220,8 @@ CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-in
 CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Exception.hh
 CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ExceptionSeverity.hh
 CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GlobalConfig.hh
+CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonTable.hh
+CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Ions.hh
 CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PDefManager.hh
 CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleDefinition.hh
 CMakeFiles/pssd.dir/generator.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleDefinition.icc
@@ -1537,8 +1541,10 @@ CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-in
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnInformation.hh
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4HnManager.hh
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ICRU90StoppingData.hh
+CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonTable.hh
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonisParamElm.hh
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonisParamMat.hh
+CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Ions.hh
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Isotope.hh
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IsotopeVector.hh
 CMakeFiles/pssd.dir/ship_pssd.cc.o: /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Log.hh

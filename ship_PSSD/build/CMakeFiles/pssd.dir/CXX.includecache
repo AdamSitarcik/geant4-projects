@@ -368,6 +368,32 @@ G4ios.hh
 
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4GlobalConfig.hh
 
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4IonTable.hh
+cmath
+-
+vector
+-
+map
+-
+G4ios.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ios.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4ParticleDefinition.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleDefinition.hh
+G4ParticleTable.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleTable.hh
+G4Ions.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Ions.hh
+
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4Ions.hh
+globals.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/globals.hh
+G4ios.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ios.hh
+G4ParticleDefinition.hh
+/home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4ParticleDefinition.hh
+
 /home/adam/programs/geant4/geant4-v11.0.2-install/include/Geant4/G4PDefManager.hh
 stdlib.h
 -
@@ -593,6 +619,8 @@ G4SystemOfUnits.hh
 /home/adam/skola/phd/geant4/ship_PSSD/G4SystemOfUnits.hh
 G4ParticleTable.hh
 /home/adam/skola/phd/geant4/ship_PSSD/G4ParticleTable.hh
+G4IonTable.hh
+/home/adam/skola/phd/geant4/ship_PSSD/G4IonTable.hh
 Randomize.hh
 /home/adam/skola/phd/geant4/ship_PSSD/Randomize.hh
 
