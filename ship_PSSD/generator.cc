@@ -44,7 +44,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 
   G4double alphaEnergy = G4RandGauss::shoot(7155,12);
 
-  G4ThreeVector posGun(0., 0., 6.*mm);
+  G4ThreeVector posGun(0., 0., -G4RandGauss::shoot(4.6,0.1)*um);
   G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, 40*mm);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
   // G4ThreeVector dirElGun(0., 0., -1.);
@@ -58,28 +58,28 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fIonParticleGun->SetParticleMomentumDirection(dirIonGun);
   fIonParticleGun->SetParticleDefinition(ion);
   fIonParticleGun->SetParticleCharge(0.*eplus);
-  fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(200,3)*MeV);
+  fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(47,3)*MeV);
 
-  fIonParticleGun->GeneratePrimaryVertex(anEvent);
+  // fIonParticleGun->GeneratePrimaryVertex(anEvent);
 
   fElectronParticleGun->SetParticlePosition(posGun);
   fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
   fElectronParticleGun->SetParticleDefinition(electron);
 
-  G4double totalICC = G4RandGauss::shoot(8.5, 0.15);
-  G4double ICConK = G4RandGauss::shoot(6.11, 0.15);
+  G4double totalICC = G4RandGauss::shoot(4.28, 0.15);
+  G4double ICConK = G4RandGauss::shoot(0.544, 0.05);
 
   if(G4UniformRand()<totalICC/(totalICC+1.))
   {
     if(G4UniformRand()<(1/totalICC*ICConK)){
-      G4double electronEnergy = G4RandGauss::shoot(94,15);
+      G4double electronEnergy = G4RandGauss::shoot(22.5,15);
       fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
-      // fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+      fElectronParticleGun->GeneratePrimaryVertex(anEvent);
     }
     else{
-      G4double electronEnergy = G4RandGauss::shoot(165,18);
+      G4double electronEnergy = G4RandGauss::shoot(93.4,18);
       fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
-      // fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+      fElectronParticleGun->GeneratePrimaryVertex(anEvent);
     }
   }
 
@@ -88,5 +88,5 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
   fAlphaParticleGun->SetParticleDefinition(alpha);
 
-  // fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
+  fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
 }

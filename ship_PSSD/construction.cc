@@ -14,6 +14,10 @@ MyDetectorConstruction::MyDetectorConstruction()
   tofLength = 7*mm;
   tofThickness = 0.15*um;
 
+  mylarWidth = 10*mm;
+  mylarLength = 10*mm;
+  mylarThickness = 1*um;
+
   DefineMaterial();
 }
 
@@ -28,6 +32,7 @@ void MyDetectorConstruction::DefineMaterial()
   pssdMat = nist->FindOrBuildMaterial("G4_Si");
   detMat2 = nist->FindOrBuildMaterial("G4_Ge");
   tofMat = nist->FindOrBuildMaterial("G4_C");
+  mylar = nist->FindOrBuildMaterial("G4_MYLAR");
 }
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
@@ -42,9 +47,16 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
   solidTOF = new G4Box("solidTOF", tofWidth/2., tofLength/2., tofThickness/2.);
   logicTOF = new G4LogicalVolume(solidTOF, tofMat, "logicTOF");
-  for(G4int i = 0; i<6; i++){
-    physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (5.+5*i)*mm), logicTOF, "physTOF", logicWorld, false, i, true);
+  for(G4int i = 0; i<3; i++){
+    for(G4int j=0; j<2; j++){
+      physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (15.+20*i+5*j)*mm), logicTOF, "physTOF", logicWorld, false, 0, true);
+    }
+  }
 
+  solidMylar = new G4Box("solidMylar", mylarWidth/2., mylarLength/2., mylarThickness/2.);
+  logicMylar = new G4LogicalVolume(solidMylar, mylar, "logicMylar");
+  for(G4int i=0; i<4; i++){
+    physMylar = new G4PVPlacement(0, G4ThreeVector(0., 0., (5+2*i)*mm), logicMylar, "physMylar", logicWorld, false, 0, true);
   }
 
   // solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0*mm, 35*mm, 140*mm/2, 0., 360*deg);

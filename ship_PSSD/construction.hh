@@ -22,16 +22,18 @@ public:
 
   virtual G4VPhysicalVolume *Construct();
 
+  G4LogicalVolume *GetScoringVolume() const {return fScoringVolume;}
+
   virtual void ConstructSDandField();
 
 private:
-  G4Material *vacuum, *pssdMat, *detMat2, *tofMat;
-  G4Box *solidWorld, *solidDetector_PSSD, *solidTOF;
+  G4Material *vacuum, *pssdMat, *detMat2, *tofMat, *mylar;
+  G4Box *solidWorld, *solidDetector_PSSD, *solidTOF, *solidMylar;
   G4Tubs *solidDetector_Ge;
-  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicTOF;
-  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge, *physTOF;
+  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicTOF, *logicMylar;
+  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge, *physTOF, *physMylar;
 
-  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld, tofWidth, tofLength, tofThickness;
+  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld, tofWidth, tofLength, tofThickness, mylarWidth, mylarLength, mylarThickness;
 
   void DefineMaterial();
 
