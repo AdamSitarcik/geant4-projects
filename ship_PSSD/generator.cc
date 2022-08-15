@@ -73,9 +73,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fIonParticleGun->SetParticleCharge(0.*eplus);
   fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(58,3)*MeV);
 
-  fElectronParticleGun->SetParticlePosition(posGun);
-  fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
-  fElectronParticleGun->SetParticleDefinition(electron);
+
 
   fProtonParticleGun->SetParticlePosition(posProtonGun);
   fProtonParticleGun->SetParticleMomentumDirection(dirIonGun);
@@ -85,9 +83,13 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double totalICC = G4RandGauss::shoot(4.28, 0.15);
   G4double ICConK = G4RandGauss::shoot(0.544, 0.05);
 
-  G4int generate_electrons = 0;
+  G4int generate_electrons = 1; // 0 - do not generate conversion electrons, 1 - generate CEs
   
   if(generate_electrons == 1){
+    fElectronParticleGun->SetParticlePosition(posGun);
+    fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
+    fElectronParticleGun->SetParticleDefinition(electron);
+
     if(G4UniformRand()<totalICC/(totalICC+1.))
     {
       if(G4UniformRand()<(1/totalICC*ICConK)){
@@ -108,7 +110,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
   fAlphaParticleGun->SetParticleDefinition(alpha);
 
-  // fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
+  fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
   // fIonParticleGun->GeneratePrimaryVertex(anEvent);
-  fProtonParticleGun->GeneratePrimaryVertex(anEvent);
+  // fProtonParticleGun->GeneratePrimaryVertex(anEvent);
 }
