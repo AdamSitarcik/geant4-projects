@@ -21,11 +21,15 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
 
 void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 {
-  G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
-  ionZ = 23;
-  ionA = 51;
-  G4double ion_kinetic_energy = 235;
+  ionZ = 26;
+  ionA = 56;
+  G4double ion_kinetic_energy = 70.;
+
+  G4double alphaEn = 7200; // in keV
+  G4double impDepth = 4.4; // in um
+
+  G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
   G4ParticleDefinition *ion = G4IonTable::GetIonTable()->GetIon(ionZ, ionA, 0.);
 
@@ -50,13 +54,13 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirYion = G4RandGauss::shoot(0,0.01);
   G4double dirZion = -1;
 
-  G4double ionSourcePosition = 55.*mm;
+  G4double ionSourcePosition = 50.*mm;
 
   G4double protonSourcePosition = 4.*mm;
 
-  G4double alphaEnergy = G4RandGauss::shoot(7155,12);
+  G4double alphaEnergyDistributed = G4RandGauss::shoot(alphaEn,12);
 
-  G4ThreeVector posGun(0., 0., -G4RandGauss::shoot(4.3,0.1)*um);
+  G4ThreeVector posGun(0., 0., -G4RandGauss::shoot(impDepth,0.1)*um);
   G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, ionSourcePosition);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
   // G4ThreeVector dirElGun(0., 0., -1.);
@@ -73,8 +77,6 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fIonParticleGun->SetParticleDefinition(ion);
   fIonParticleGun->SetParticleCharge(0.*eplus);
   fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(ion_kinetic_energy, 0)*MeV);
-
-
 
   fProtonParticleGun->SetParticlePosition(posProtonGun);
   fProtonParticleGun->SetParticleMomentumDirection(dirIonGun);
@@ -106,7 +108,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
     }
   }
 
-  fAlphaParticleGun->SetParticleEnergy(alphaEnergy*keV);
+  fAlphaParticleGun->SetParticleEnergy(alphaEnergyDistributed*keV);
   fAlphaParticleGun->SetParticlePosition(posGun);
   fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
   fAlphaParticleGun->SetParticleDefinition(alpha);

@@ -33,7 +33,7 @@ private:
   G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicTOF, *logicMylar, *logicTarget, *logicCLayer;
   G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge, *physTOF, *physMylar, *physTarget, *physCLayer;
 
-  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld, tofWidth, tofLength, tofThickness, mylarWidth, mylarLength, mylarThickness, targetXY, targetThickness, carbonLayerThickness, targetPosition;
+  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld, tofWidth, tofLength, tofThickness, mylarWidth, mylarLength, mylarThickness, targetXY, targetThickness, carbonLayerThicknessBehindTarget, carbonLayerThicknessInFrontTarget, targetPosition, targetPositionIonLoss;
   G4int projectile_loses_in_target, n_tof, n_mylar;
 
   void DefineMaterial();
