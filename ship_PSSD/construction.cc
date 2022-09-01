@@ -51,12 +51,12 @@ void MyDetectorConstruction::DefineMaterial()
   mylar = nist->FindOrBuildMaterial("G4_MYLAR");
 
   // targetMat = new G4Material("targetMat", 2.7133*g/cm3, 2); // SmF3
-  // targetMat->AddElement(nist->FindOrBuildElement("Sm"),1);
-  // targetMat->AddElement(nist->FindOrBuildElement("F"),3);
+  // targetMat->AddElement(nist->FindOrBuildElement("Sm"), 1);
+  // targetMat->AddElement(nist->FindOrBuildElement("F"), 3);
 
   targetMat = new G4Material("targetMat", 2.5266*g/cm3, 2); // PrF3
-  targetMat->AddElement(nist->FindOrBuildElement("Pr"),1);
-  targetMat->AddElement(nist->FindOrBuildElement("F"),3);
+  targetMat->AddElement(nist->FindOrBuildElement("Pr"), 1);
+  targetMat->AddElement(nist->FindOrBuildElement("F"), 3);
 
 }
 
