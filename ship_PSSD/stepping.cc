@@ -19,6 +19,14 @@ void MySteppingAction::UserSteppingAction(const G4Step *step)
   // if(volume != fScoringVolume)
   //   return;
 
-  G4double edep = step->GetTotalEnergyDeposit();
-  fEventAction->AddEdep(edep);
+  if (volume->GetName() == "logicDetector_PSSD") {
+    G4double edep = step->GetTotalEnergyDeposit();
+    fEventAction->AddEdep(edep);
+  }
+  else if (volume->GetName() == "logicDetector_Veto") {
+    // step->ResetTotalEnergyDeposit();
+    G4double eveto = step->GetTotalEnergyDeposit();
+    fEventAction->AddEVeto(eveto);
+  }
+
 }

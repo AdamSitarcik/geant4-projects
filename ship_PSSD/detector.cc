@@ -18,12 +18,14 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
   G4ThreeVector startPos = preStepPoint->GetPosition();
   G4ThreeVector endPos = postStepPoint->GetPosition();
 
-  const G4VTouchable * touchable = aStep->GetPreStepPoint()->GetTouchable();
+  const G4VTouchable *touchable = aStep->GetPreStepPoint()->GetTouchable();
 
-  G4int copyNo = touchable->GetCopyNumber();
+  // G4int copyNo = touchable->GetCopyNumber();
 
   G4VPhysicalVolume *physVol = touchable->GetVolume();
   G4ThreeVector posDet = physVol->GetTranslation();
+  auto copyNo = physVol->GetCopyNo();
+  std::cout << "CopyNo: " << copyNo << std::endl;
 
   G4int evtID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 

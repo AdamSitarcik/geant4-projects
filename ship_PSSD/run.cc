@@ -10,6 +10,7 @@ MyRunAction::MyRunAction()
   man->CreateNtupleDColumn("fY");
   man->CreateNtupleDColumn("fZ");
   man->CreateNtupleDColumn("fEdep");
+  man->CreateNtupleDColumn("fEVeto");
   man->FinishNtuple(0);
 }
 

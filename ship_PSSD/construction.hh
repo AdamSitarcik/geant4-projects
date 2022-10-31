@@ -26,15 +26,15 @@ public:
 
 private:
   G4Material *vacuum, *detMat1, *detMat2;
-  G4Box *solidWorld, *solidDetector_PSSD;
+  G4Box *solidWorld, *solidDetector_PSSD, *solidDetector_Veto;
   G4Tubs *solidDetector_Ge;
-  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge;
-  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge;
+  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicDetector_Veto;
+  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge, *physDetector_Veto;
 
   G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld;
 
   void DefineMaterial();
 
-  G4LogicalVolume *fScoringVolume;
+  G4LogicalVolume *fScoringVolumePSSD, *fScoringVolumeVeto;
 };
 #endif
