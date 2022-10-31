@@ -20,7 +20,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4String particleName1 = "e-";
   G4ParticleDefinition *electron = particleTable->FindParticle(particleName1);
 
-  G4String particleName2 = "proton";
+  G4String particleName2 = "e-";
   G4ParticleDefinition *alpha = particleTable->FindParticle(particleName2);
 
   G4double dirXel = G4UniformRand()-0.5;
@@ -31,15 +31,15 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirYal = G4UniformRand()-0.5;
   G4double dirZal = G4UniformRand()-0.5;
 
-  G4double alphaEnergy = G4RandGauss::shoot(10000,0);
+  G4double alphaEnergy = G4RandGauss::shoot(900,0);
 
-  // G4ThreeVector posGun(0., 0., -6.*um);
-  G4ThreeVector posGun(0., 0., 1.*mm);
+  G4ThreeVector posGun(0., 0., -6.*um);
+  // G4ThreeVector posGun(0., 0., 1.*mm);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
   // G4ThreeVector dirElGun(0., 0., -1.);
 
-  // G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
-  G4ThreeVector dirAlGun(0., 0., -1.);
+  G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
+  // G4ThreeVector dirAlGun(0., 0., -1.);
 
   fElectronParticleGun->SetParticlePosition(posGun);
   fElectronParticleGun->SetParticleMomentumDirection(dirElGun);

@@ -8,8 +8,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 
   pssdWidth = 5*mm;
   pssdLength = 35*mm;
-  // pssdThickness = 0.3*mm;
-  pssdThickness = 80*um;
+  pssdThickness = 0.3*mm;
 
   DefineMaterial();
 }
@@ -36,7 +35,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, detMat1, "logicDetector_PSSD");
   physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
 
-  solidDetector_Veto= new G4Box("solidDetector_Veto", pssdWidth/2, pssdLength/2, pssdThickness/2);
+  solidDetector_Veto= new G4Box("solidDetector_Veto", pssdWidth/2*16, pssdLength/2, pssdThickness/2);
   logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, detMat1, "logicDetector_Veto");
   physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
 
