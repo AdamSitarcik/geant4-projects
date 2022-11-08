@@ -4,6 +4,7 @@
 #include "G4UserEventAction.hh"
 #include "G4Event.hh"
 #include "G4AnalysisManager.hh"
+#include "Randomize.hh"
 
 #include "run.hh"
 

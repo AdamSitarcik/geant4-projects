@@ -24,7 +24,6 @@ void MySteppingAction::UserSteppingAction(const G4Step *step)
     fEventAction->AddEdep(edep);
   }
   else if (volume->GetName() == "logicDetector_Veto") {
-    // step->ResetTotalEnergyDeposit();
     G4double eveto = step->GetTotalEnergyDeposit();
     fEventAction->AddEVeto(eveto);
   }

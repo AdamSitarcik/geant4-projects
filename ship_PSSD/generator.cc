@@ -20,7 +20,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4String particleName1 = "e-";
   G4ParticleDefinition *electron = particleTable->FindParticle(particleName1);
 
-  G4String particleName2 = "e-";
+  G4String particleName2 = "alpha";
   G4ParticleDefinition *alpha = particleTable->FindParticle(particleName2);
 
   G4double dirXel = G4UniformRand()-0.5;
@@ -31,9 +31,16 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirYal = G4UniformRand()-0.5;
   G4double dirZal = G4UniformRand()-0.5;
 
-  G4double alphaEnergy = G4RandGauss::shoot(900,0);
+  G4double alphaEnergy = 7155;
+  G4double convTransitionEnergy = 180;
+  G4double elKEnergy = convTransitionEnergy - 85.53;
+  G4double elLEnergy = convTransitionEnergy - 15;
+  G4double electronEnergy; 
+  G4double totalICC = 2.38;
+  G4double KL_ratio = 3.95;
+  G4double ICConK = totalICC/(KL_ratio+1)*KL_ratio;
 
-  G4ThreeVector posGun(0., 0., -6.*um);
+  G4ThreeVector posGun(0., 0., -4.*um);
   // G4ThreeVector posGun(0., 0., 1.*mm);
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
   // G4ThreeVector dirElGun(0., 0., -1.);
@@ -45,20 +52,16 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
   fElectronParticleGun->SetParticleDefinition(electron);
 
-  G4double totalICC = G4RandGauss::shoot(1.616, 0.15);
-  G4double ICConK = G4RandGauss::shoot(1.322, 0.15);
-
   if(G4UniformRand()<totalICC/(totalICC+1.))
   {
     if(G4UniformRand()<(1/totalICC*ICConK)){
-      G4double electronEnergy = G4RandGauss::shoot(94,15);
-      fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
+      electronEnergy = elKEnergy;
     }
     else{
-      G4double electronEnergy = G4RandGauss::shoot(165,18);
-      fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
+      electronEnergy = elLEnergy;
     }
-    // fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+    fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
+    fElectronParticleGun->GeneratePrimaryVertex(anEvent);
   }
 
   fAlphaParticleGun->SetParticleEnergy(alphaEnergy*keV);
