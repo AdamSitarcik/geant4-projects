@@ -1,1 +1,3 @@
 *root
+/ship_PSSD/build/**/*
+!/ship_PSSD/build/*.mac
