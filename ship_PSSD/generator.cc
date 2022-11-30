@@ -57,7 +57,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double KL_ratio = 3.95;
   G4double ICConK = totalICC/(KL_ratio+1)*KL_ratio;
 
-  G4ThreeVector posGun(0., 0., -4.*um);
+  G4ThreeVector posGun(0., 0., -impDepth*um);
   // G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, ionSourcePosition);
 
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
@@ -98,7 +98,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
       electronEnergy = elLEnergy;
     }
     fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
-    fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+    // fElectronParticleGun->GeneratePrimaryVertex(anEvent);
   }
 
   fAlphaParticleGun->SetParticleEnergy(alphaEnergy*keV);
@@ -106,7 +106,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
   fAlphaParticleGun->SetParticleDefinition(alpha);
 
-  // fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
-  fIonParticleGun->GeneratePrimaryVertex(anEvent);
+  fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
+  // fIonParticleGun->GeneratePrimaryVertex(anEvent);
   // fProtonParticleGun->GeneratePrimaryVertex(anEvent);
 }

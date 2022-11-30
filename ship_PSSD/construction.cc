@@ -76,7 +76,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     logicTOF = new G4LogicalVolume(solidTOF, carbon, "logicTOF");
     for(G4int i = 0; i<n_tof; i++){
       for(G4int j=0; j<1; j++){
-        physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (15.+8*i+2*j)*mm), logicTOF, "physTOF", logicWorld, false, 0, true);
+        // physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (15.+8*i+2*j)*mm), logicTOF, "physTOF", logicWorld, false, 0, true);
       }
     }
 
@@ -87,11 +87,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     }
 
     solidTarget = new G4Box("solidTarget", targetXY/2., targetXY/2., targetThickness/2.);
-    logicTarget = new G4LogicalVolume(solidTarget, targetMat, "logicTarget");
+    // logicTarget = new G4LogicalVolume(solidTarget, targetMat, "logicTarget");
     // physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition), logicTarget, "physTarget", logicWorld, false, 0, true);
 
     solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThicknessBehindTarget/2.);
-    logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");
+    // logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");
     // physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition-targetThickness/2.-carbonLayerThicknessBehindTarget/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
   // }
   // else if(projectile_loses_in_target == 1)
@@ -106,7 +106,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   // }
   solidDetector_Veto= new G4Box("solidDetector_Veto", pssdWidth/2*16, pssdLength/2, pssdThickness/2);
   logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, pssdMat, "logicDetector_Veto");
-  physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
+  // physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
 
   // solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0*mm, 35*mm, 140*mm/2, 0., 360*deg);
   // logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, detMat2, "logicDetector_Ge");
