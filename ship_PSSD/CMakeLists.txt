@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.9 FATAL_ERROR)
 
 project(SHIP_PSSD_Detector)
 
