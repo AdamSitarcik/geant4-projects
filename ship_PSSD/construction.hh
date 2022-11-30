@@ -22,7 +22,7 @@ public:
 
   virtual G4VPhysicalVolume *Construct();
 
-  G4LogicalVolume *GetScoringVolume() const {return fScoringVolume;}
+  // G4LogicalVolume *GetScoringVolume() const {return fScoringVolume;}
 
   virtual void ConstructSDandField();
 

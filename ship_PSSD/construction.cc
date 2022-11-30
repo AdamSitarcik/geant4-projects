@@ -105,7 +105,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   //   physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPositionIonLoss+targetThickness/2.+carbonLayerThicknessInFrontTarget/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
   // }
   solidDetector_Veto= new G4Box("solidDetector_Veto", pssdWidth/2*16, pssdLength/2, pssdThickness/2);
-  logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, detMat1, "logicDetector_Veto");
+  logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, pssdMat, "logicDetector_Veto");
   physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
 
   // solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0*mm, 35*mm, 140*mm/2, 0., 360*deg);

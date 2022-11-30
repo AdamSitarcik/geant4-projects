@@ -58,31 +58,28 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double ICConK = totalICC/(KL_ratio+1)*KL_ratio;
 
   G4ThreeVector posGun(0., 0., -4.*um);
-  G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, ionSourcePosition);
+  // G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, ionSourcePosition);
 
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
   // G4ThreeVector dirElGun(0., 0., -1.);
 
-  G4ThreeVector posProtonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, protonSourcePosition);
+  // G4ThreeVector posProtonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, protonSourcePosition);
 
   G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
   // G4ThreeVector dirAlGun(0., 0., -1.);
 
-  G4ThreeVector dirIonGun(dirXion, dirYion, dirZion);
+  // G4ThreeVector dirIonGun(dirXion, dirYion, dirZion);
 
-  fIonParticleGun->SetParticlePosition(posIonGun);
-  fIonParticleGun->SetParticleMomentumDirection(dirIonGun);
-  fIonParticleGun->SetParticleDefinition(ion);
-  fIonParticleGun->SetParticleCharge(0.*eplus);
-  fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(ion_kinetic_energy, 0)*MeV);
+  // fIonParticleGun->SetParticlePosition(posIonGun);
+  // fIonParticleGun->SetParticleMomentumDirection(dirIonGun);
+  // fIonParticleGun->SetParticleDefinition(ion);
+  // fIonParticleGun->SetParticleCharge(0.*eplus);
+  // fIonParticleGun->SetParticleEnergy(G4RandGauss::shoot(ion_kinetic_energy, 0)*MeV);
 
-  fProtonParticleGun->SetParticlePosition(posProtonGun);
-  fProtonParticleGun->SetParticleMomentumDirection(dirIonGun);
-  fProtonParticleGun->SetParticleDefinition(proton);
-  fProtonParticleGun->SetParticleEnergy(G4RandGauss::shoot(16,2)*MeV);
-
-  G4double totalICC = G4RandGauss::shoot(4.28, 0.15);
-  G4double ICConK = G4RandGauss::shoot(0.544, 0.05);
+  // fProtonParticleGun->SetParticlePosition(posProtonGun);
+  // fProtonParticleGun->SetParticleMomentumDirection(dirIonGun);
+  // fProtonParticleGun->SetParticleDefinition(proton);
+  // fProtonParticleGun->SetParticleEnergy(G4RandGauss::shoot(16,2)*MeV);
 
   G4int generate_electrons = 0; // 0 - do not generate conversion electrons, 1 - generate CEs
   

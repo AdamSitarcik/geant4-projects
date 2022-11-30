@@ -14,10 +14,10 @@ void MySteppingAction::UserSteppingAction(const G4Step *step)
 
   const MyDetectorConstruction *detectorConstruction = static_cast<const MyDetectorConstruction*> (G4RunManager::GetRunManager()->GetUserDetectorConstruction());
 
-  G4LogicalVolume *fScoringVolume = detectorConstruction->GetScoringVolume();
+  // G4LogicalVolume *fScoringVolume = detectorConstruction->GetScoringVolume();
 
-  if(volume != fScoringVolume)
-    return;
+  // if(volume != fScoringVolume)
+  //   return;
 
   if (volume->GetName() == "logicDetector_PSSD") {
     G4double edep = step->GetTotalEnergyDeposit();
