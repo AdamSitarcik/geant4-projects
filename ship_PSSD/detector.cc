@@ -18,9 +18,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
   G4ThreeVector startPos = preStepPoint->GetPosition();
   G4ThreeVector endPos = postStepPoint->GetPosition();
 
-  const G4VTouchable * touchable = aStep->GetPreStepPoint()->GetTouchable();
-
-  G4int copyNo = touchable->GetCopyNumber();
+  const G4VTouchable *touchable = aStep->GetPreStepPoint()->GetTouchable();
 
   G4VPhysicalVolume *physVol = touchable->GetVolume();
   G4ThreeVector posDet = physVol->GetTranslation();
