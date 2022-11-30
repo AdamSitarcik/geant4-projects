@@ -4,7 +4,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
 {
   fElectronParticleGun = new G4ParticleGun(1);
 
-  fAlphaParticleGun = new G4ParticleGun(1);
+  fMainParticleGun = new G4ParticleGun(1);
 
   fIonParticleGun = new G4ParticleGun(1);
 
@@ -14,7 +14,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
 MyPrimaryGenerator::~MyPrimaryGenerator()
 {
   delete fElectronParticleGun;
-  delete fAlphaParticleGun;
+  delete fMainParticleGun;
   delete fIonParticleGun;
   delete fProtonParticleGun;
 }
@@ -31,24 +31,22 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 
   G4ParticleDefinition *ion = G4IonTable::GetIonTable()->GetIon(ionZ, ionA, 0.);
 
-  G4String particleName1 = "e-";
-  G4ParticleDefinition *electron = particleTable->FindParticle(particleName1);
-
-  G4String particleName2 = "alpha";
-  G4ParticleDefinition *alpha = particleTable->FindParticle(particleName2);
-
-  G4String particleName3 = "proton";
-  G4ParticleDefinition *proton = particleTable->FindParticle(particleName3);  
+  G4ParticleDefinition *electron = particleTable->FindParticle("e-");
+  G4ParticleDefinition *alpha = particleTable->FindParticle("alpha");
+  G4ParticleDefinition *proton = particleTable->FindParticle("proton");  
+  G4ParticleDefinition *gamma = particleTable->FindParticle("gamma");
 
   G4double dirXel = G4UniformRand()-0.5;
   G4double dirYel = G4UniformRand()-0.5;
   G4double dirZel = G4UniformRand()-0.5;
 
-  G4double dirXal = G4UniformRand()-0.5;
-  G4double dirYal = G4UniformRand()-0.5;
-  G4double dirZal = G4UniformRand()-0.5;
+  G4double dirX = G4UniformRand()-0.5;
+  G4double dirY = G4UniformRand()-0.5;
+  G4double dirZ = G4UniformRand()-0.5;
 
-  G4double alphaEnergy = 7155;
+  G4double particleEnergy = 20; // in keV
+
+  // Input and calculation of parameters of electrons in case of IC simulations
   G4double convTransitionEnergy = 180;
   G4double elKEnergy = convTransitionEnergy - 85.53;
   G4double elLEnergy = convTransitionEnergy - 15;
@@ -65,9 +63,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 
   // G4ThreeVector posProtonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, protonSourcePosition);
 
-  G4ThreeVector dirAlGun(dirXal, dirYal, dirZal);
-  // G4ThreeVector dirAlGun(0., 0., -1.);
-
+  G4ThreeVector dirMainGun(dirX, dirY, dirZ);
   // G4ThreeVector dirIonGun(dirXion, dirYion, dirZion);
 
   // fIonParticleGun->SetParticlePosition(posIonGun);
@@ -101,12 +97,12 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
     // fElectronParticleGun->GeneratePrimaryVertex(anEvent);
   }
 
-  fAlphaParticleGun->SetParticleEnergy(alphaEnergy*keV);
-  fAlphaParticleGun->SetParticlePosition(posGun);
-  fAlphaParticleGun->SetParticleMomentumDirection(dirAlGun);
-  fAlphaParticleGun->SetParticleDefinition(alpha);
+  fMainParticleGun->SetParticleEnergy(particleEnergy*keV);
+  fMainParticleGun->SetParticlePosition(posGun);
+  fMainParticleGun->SetParticleMomentumDirection(dirMainGun);
+  fMainParticleGun->SetParticleDefinition(gamma);
 
-  fAlphaParticleGun->GeneratePrimaryVertex(anEvent);
+  fMainParticleGun->GeneratePrimaryVertex(anEvent);
   // fIonParticleGun->GeneratePrimaryVertex(anEvent);
   // fProtonParticleGun->GeneratePrimaryVertex(anEvent);
 }

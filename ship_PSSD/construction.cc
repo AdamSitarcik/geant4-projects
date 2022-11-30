@@ -45,8 +45,8 @@ void MyDetectorConstruction::DefineMaterial()
   G4NistManager *nist = G4NistManager::Instance();
 
   vacuum = nist->FindOrBuildMaterial("G4_Galactic");
-  pssdMat = nist->FindOrBuildMaterial("G4_Si");
-  detMat2 = nist->FindOrBuildMaterial("G4_Ge");
+  silicon = nist->FindOrBuildMaterial("G4_Si");
+  germanium = nist->FindOrBuildMaterial("G4_Ge");
   carbon = nist->FindOrBuildMaterial("G4_C");
   mylar = nist->FindOrBuildMaterial("G4_MYLAR");
 
@@ -67,7 +67,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
 
   solidDetector_PSSD = new G4Box("solidDetector_PSSD", pssdWidth/2, pssdLength/2, pssdThickness/2);
-  logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, pssdMat, "logicDetector_PSSD");
+  logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, silicon, "logicDetector_PSSD");
   physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
 
   // if(projectile_loses_in_target == 0)
@@ -105,11 +105,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   //   physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPositionIonLoss+targetThickness/2.+carbonLayerThicknessInFrontTarget/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
   // }
   solidDetector_Veto= new G4Box("solidDetector_Veto", pssdWidth/2*16, pssdLength/2, pssdThickness/2);
-  logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, pssdMat, "logicDetector_Veto");
+  logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, silicon, "logicDetector_Veto");
   // physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
 
   // solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0*mm, 35*mm, 140*mm/2, 0., 360*deg);
-  // logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, detMat2, "logicDetector_Ge");
+  // logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, germanium, "logicDetector_Ge");
   // G4VPhysicalVolume *physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., -72*mm), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);
 
   fScoringVolumePSSD = logicDetector_PSSD;
