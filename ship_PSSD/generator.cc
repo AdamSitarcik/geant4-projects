@@ -25,7 +25,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   ionA = 56;
   G4double ion_kinetic_energy = 70.;
 
-  G4double impDepth = 4.; // in um
+  G4double impDepth = 8.; // in um
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
@@ -44,14 +44,20 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirY = G4UniformRand()-0.5;
   G4double dirZ = G4UniformRand()-0.5;
 
-  G4double particleEnergy = 7255; // in keV
+  G4double particleEnergy = 7100; // in keV
 
   // Input and calculation of parameters of electrons in case of IC simulations
-  // 108kev gate
-  G4double convTransitionEnergy = 108;
-  G4double totalICC = 0.355;
-  G4double K_ICC = 0.283;
-  G4double KL_ratio = 5.16;
+  // custom gate
+  G4double convTransitionEnergy = 235;
+  G4double totalICC = 3.36;
+  G4double K_ICC = 2.49;
+  G4double KL_ratio = 3.81;
+
+  // // 108kev gate
+  // G4double convTransitionEnergy = 108;
+  // G4double totalICC = 0.355;
+  // G4double K_ICC = 0.283;
+  // G4double KL_ratio = 5.16;
 
   // // 186kev gate
   // G4double convTransitionEnergy = 285;
