@@ -18,7 +18,7 @@ void MyEventAction::BeginOfEventAction(const G4Event*)
 void MyEventAction::EndOfEventAction(const G4Event*)
 {
   G4AnalysisManager *man = G4AnalysisManager::Instance();
-  fEdep = G4RandGauss::shoot(fEdep,0.008); // Defining the resolution of the PSSD
+  fEdep = G4RandGauss::shoot(fEdep,0.018)*1000; // Defining the resolution of the PSSD
   // fEVeto = G4RandGauss::shoot(fEVeto,0.025); // Defining the resolution of the VETO
 
   man->FillNtupleDColumn(4,fEdep);

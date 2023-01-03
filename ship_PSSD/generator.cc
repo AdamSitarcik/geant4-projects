@@ -25,7 +25,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   ionA = 56;
   G4double ion_kinetic_energy = 70.;
 
-  G4double impDepth = 8.; // in um
+  G4double impDepth = 4.5; // in um
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
@@ -44,44 +44,50 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirY = G4UniformRand()-0.5;
   G4double dirZ = G4UniformRand()-0.5;
 
-  G4double particleEnergy = 7100; // in keV
+  // G4double particleEnergy = 7100; // in keV
 
   // Input and calculation of parameters of electrons in case of IC simulations
-  // custom gate
-  G4double convTransitionEnergy = 235;
-  G4double totalICC = 3.36;
-  G4double K_ICC = 2.49;
-  G4double KL_ratio = 3.81;
+  // // custom gate
+  // G4double particleEnergy = 7120; // in keV
+  // G4double convTransitionEnergy = 235;
+  // G4double totalICC = 3.36;
+  // G4double K_ICC = 2.49;
+  // G4double KL_ratio = 3.81;
 
   // // 108kev gate
+  // G4double particleEnergy = 7120; // in keV
   // G4double convTransitionEnergy = 108;
   // G4double totalICC = 0.355;
   // G4double K_ICC = 0.283;
   // G4double KL_ratio = 5.16;
 
   // // 186kev gate
+  // G4double particleEnergy = 7120; // in keV
   // G4double convTransitionEnergy = 285;
   // G4double totalICC = 0.451;
   // G4double K_ICC = 0.37;
   // G4double KL_ratio = 5.92;
 
   // // 215kev gate
+  // G4double particleEnergy = 7150; // in keV
   // G4double convTransitionEnergy = 145;
   // G4double totalICC = 1.32;
   // G4double K_ICC = 0.345;
   // G4double KL_ratio = 0.474;
 
   // // 238kev gate
+  // G4double particleEnergy = 7150; // in keV
   // G4double convTransitionEnergy = 180;
   // G4double totalICC = 1.616;
   // G4double K_ICC = 1.322;
   // G4double KL_ratio = 5.87;
 
-  // // 255kev gate
-  // G4double convTransitionEnergy = 195;
-  // G4double totalICC = 1.291;
-  // G4double K_ICC = 1.057;
-  // G4double KL_ratio = 5.88;
+  // 255kev gate
+  G4double particleEnergy = 7130; // in keV
+  G4double convTransitionEnergy = 195;
+  G4double totalICC = 1.291;
+  G4double K_ICC = 1.057;
+  G4double KL_ratio = 5.88;
 
   G4double elKEnergy = convTransitionEnergy - 85.53;
   G4double elLEnergy = convTransitionEnergy - 15;
