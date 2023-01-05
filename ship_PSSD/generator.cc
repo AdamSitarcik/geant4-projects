@@ -25,7 +25,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   ionA = 56;
   G4double ion_kinetic_energy = 70.;
 
-  G4double impDepth = 4.5; // in um
+  G4double impDepth = 8; // in um
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
@@ -39,6 +39,10 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirXel = G4UniformRand()-0.5;
   G4double dirYel = G4UniformRand()-0.5;
   G4double dirZel = G4UniformRand()-0.5;
+  
+  G4double dirXrtg = G4UniformRand()-0.5;
+  G4double dirYrtg = G4UniformRand()-0.5;
+  G4double dirZrtg = G4UniformRand()-0.5;
 
   G4double dirX = G4UniformRand()-0.5;
   G4double dirY = G4UniformRand()-0.5;
@@ -83,15 +87,18 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   // G4double KL_ratio = 5.87;
 
   // 255kev gate
-  G4double particleEnergy = 7130; // in keV
-  G4double convTransitionEnergy = 195;
-  G4double totalICC = 1.291;
-  G4double K_ICC = 1.057;
+  G4double particleEnergy = 7200; // in keV
+  G4double convTransitionEnergy = 200;
+  G4double totalICC = 1.203;
+  G4double K_ICC = 0.9845;
   G4double KL_ratio = 5.88;
 
-  G4double elKEnergy = convTransitionEnergy - 85.53;
-  G4double elLEnergy = convTransitionEnergy - 15;
-  G4double elMEnergy = convTransitionEnergy - 3;
+  G4double rtgKEn = 85.53;
+  G4double rtgLEn = 15;
+  G4double rtgMEn = 3;
+  G4double elKEnergy = convTransitionEnergy - rtgKEn;
+  G4double elLEnergy = convTransitionEnergy - rtgLEn;
+  G4double elMEnergy = convTransitionEnergy - rtgMEn;
   G4double electronEnergy; 
 
   G4double L_ICC = K_ICC/KL_ratio;
