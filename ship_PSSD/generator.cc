@@ -9,6 +9,8 @@ MyPrimaryGenerator::MyPrimaryGenerator()
   fIonParticleGun = new G4ParticleGun(1);
 
   fProtonParticleGun = new G4ParticleGun(1);
+
+  fGammaParticleGun = new G4ParticleGun(1);
 }
 
 MyPrimaryGenerator::~MyPrimaryGenerator()
@@ -17,6 +19,7 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
   delete fMainParticleGun;
   delete fIonParticleGun;
   delete fProtonParticleGun;
+  delete fGammaParticleGun;
 }
 
 void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
@@ -25,7 +28,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   ionA = 56;
   G4double ion_kinetic_energy = 70.;
 
-  G4double impDepth = 8; // in um
+  G4double impDepth = 150; // in um
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
@@ -93,12 +96,17 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double K_ICC = 0.9845;
   G4double KL_ratio = 5.88;
 
-  G4double rtgKEn = 85.53;
-  G4double rtgLEn = 15;
-  G4double rtgMEn = 3;
-  G4double elKEnergy = convTransitionEnergy - rtgKEn;
-  G4double elLEnergy = convTransitionEnergy - rtgLEn;
-  G4double elMEnergy = convTransitionEnergy - rtgMEn;
+  G4double gammaEn = 100;
+  G4double bindingK = 85.53;
+  G4double bindingL1 = 15.3;
+  G4double bindingL2 = 14.7;
+  G4double bindingL3 = 12.7;
+  G4double bindingM = 3;
+  G4double elKEnergy = convTransitionEnergy - bindingK;
+  G4double elL1Energy = convTransitionEnergy - bindingL1;
+  G4double elL2Energy = convTransitionEnergy - bindingL2;
+  G4double elL3Energy = convTransitionEnergy - bindingL3;
+  G4double elMEnergy = convTransitionEnergy - bindingM;
   G4double electronEnergy; 
 
   G4double L_ICC = K_ICC/KL_ratio;
@@ -109,11 +117,11 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   // G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, ionSourcePosition);
 
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
-  // G4ThreeVector dirElGun(0., 0., -1.);
 
   // G4ThreeVector posProtonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, protonSourcePosition);
 
   G4ThreeVector dirMainGun(dirX, dirY, dirZ);
+  G4ThreeVector dirGammaGun(dirXrtg, dirYrtg, dirZrtg);
   // G4ThreeVector dirIonGun(dirXion, dirYion, dirZion);
 
   // fIonParticleGun->SetParticlePosition(posIonGun);
@@ -127,7 +135,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   // fProtonParticleGun->SetParticleDefinition(proton);
   // fProtonParticleGun->SetParticleEnergy(G4RandGauss::shoot(16,2)*MeV);
 
-  G4int generate_electrons = 1; // 0 - do not generate conversion electrons, 1 - generate CEs
+  G4int generate_electrons = 0; // 0 - do not generate conversion electrons, 1 - generate CEs
   
   if(generate_electrons == 1){
     fElectronParticleGun->SetParticlePosition(posGun);
@@ -137,28 +145,43 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 
   G4double conversionTypePercent = G4UniformRand();
 
-  if(G4UniformRand()<totalICC/(totalICC+1.))
-  {
-    if(conversionTypePercent < (K_ICC/totalICC)){
-      electronEnergy = elKEnergy;
-    }
-    else if(conversionTypePercent > (K_ICC/totalICC) && conversionTypePercent < (L_ICC/totalICC + K_ICC/totalICC)){
-      electronEnergy = elLEnergy;
-    }
-    else {
-      electronEnergy = elMEnergy;
-    }
-    // electronEnergy = G4RandGauss::shoot(electronEnergy,10);
+  if(G4UniformRand()<0.5) {
+    electronEnergy = 100;
+    fElectronParticleGun->SetParticlePosition(posGun);
+    fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
+    fElectronParticleGun->SetParticleDefinition(electron);
     fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
     fElectronParticleGun->GeneratePrimaryVertex(anEvent);
   }
+
+  // if(G4UniformRand()<totalICC/(totalICC+1.))
+  // {
+  //   if(conversionTypePercent < (K_ICC/totalICC)){
+  //     electronEnergy = elKEnergy;
+  //   }
+  //   else if(conversionTypePercent > (K_ICC/totalICC) && conversionTypePercent < (L_ICC/totalICC + K_ICC/totalICC)){
+  //     electronEnergy = elLEnergy;
+  //   }
+  //   else {
+  //     electronEnergy = elMEnergy;
+  //   }
+  //   // electronEnergy = G4RandGauss::shoot(electronEnergy,10);
+  //   fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
+  //   fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+  // }
 
   fMainParticleGun->SetParticleEnergy(particleEnergy*keV);
   fMainParticleGun->SetParticlePosition(posGun);
   fMainParticleGun->SetParticleMomentumDirection(dirMainGun);
   fMainParticleGun->SetParticleDefinition(alpha);
 
+  fGammaParticleGun->SetParticleEnergy(gammaEn*keV);
+  fGammaParticleGun->SetParticlePosition(posGun);
+  fGammaParticleGun->SetParticleMomentumDirection(dirGammaGun);
+  fGammaParticleGun->SetParticleDefinition(gamma);
+
   fMainParticleGun->GeneratePrimaryVertex(anEvent);
   // fIonParticleGun->GeneratePrimaryVertex(anEvent);
   // fProtonParticleGun->GeneratePrimaryVertex(anEvent);
+  // fGammaParticleGun->GeneratePrimaryVertex(anEvent);
 }
