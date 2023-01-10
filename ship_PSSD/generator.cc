@@ -28,7 +28,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   ionA = 56;
   G4double ion_kinetic_energy = 70.;
 
-  G4double impDepth = 150; // in um
+  G4double impDepth = 8.; // in um
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
@@ -113,14 +113,17 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double M_ICC = totalICC - K_ICC - L_ICC;
   G4double ICConK = totalICC/(KL_ratio+1)*KL_ratio;
 
-  G4ThreeVector posGun(0., 0., -impDepth*um);
+  G4ThreeVector posGun(0., 0., impDepth*um);
   // G4ThreeVector posIonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, ionSourcePosition);
 
   G4ThreeVector dirElGun(dirXel, dirYel, dirZel);
+  // G4ThreeVector dirElGun(0,0,1);
 
   // G4ThreeVector posProtonGun(G4RandGauss::shoot(0,0.1)*mm, G4RandGauss::shoot(0,0.1)*mm, protonSourcePosition);
 
   G4ThreeVector dirMainGun(dirX, dirY, dirZ);
+  // G4ThreeVector dirMainGun(0,0,1);
+
   G4ThreeVector dirGammaGun(dirXrtg, dirYrtg, dirZrtg);
   // G4ThreeVector dirIonGun(dirXion, dirYion, dirZion);
 
@@ -145,14 +148,14 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 
   G4double conversionTypePercent = G4UniformRand();
 
-  if(G4UniformRand()<0.5) {
+  // if(G4UniformRand()<0.5) {
     electronEnergy = 100;
     fElectronParticleGun->SetParticlePosition(posGun);
     fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
     fElectronParticleGun->SetParticleDefinition(electron);
     fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
     fElectronParticleGun->GeneratePrimaryVertex(anEvent);
-  }
+  // }
 
   // if(G4UniformRand()<totalICC/(totalICC+1.))
   // {
@@ -180,7 +183,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fGammaParticleGun->SetParticleMomentumDirection(dirGammaGun);
   fGammaParticleGun->SetParticleDefinition(gamma);
 
-  fMainParticleGun->GeneratePrimaryVertex(anEvent);
+  // fMainParticleGun->GeneratePrimaryVertex(anEvent);
   // fIonParticleGun->GeneratePrimaryVertex(anEvent);
   // fProtonParticleGun->GeneratePrimaryVertex(anEvent);
   // fGammaParticleGun->GeneratePrimaryVertex(anEvent);

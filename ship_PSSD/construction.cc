@@ -68,7 +68,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
   solidDetector_PSSD = new G4Box("solidDetector_PSSD", pssdWidth/2, pssdLength/2, pssdThickness/2);
   logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, silicon, "logicDetector_PSSD");
-  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
+  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
 
   // if(projectile_loses_in_target == 0)
   // {
