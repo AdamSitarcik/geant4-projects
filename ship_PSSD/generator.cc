@@ -96,7 +96,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double K_ICC = 0.9845;
   G4double KL_ratio = 5.88;
 
-  G4double gammaEn = 100;
+  // G4double gammaEn = 100;
   G4double bindingK = 85.53;
   G4double bindingL1 = 15.3;
   G4double bindingL2 = 14.7;
@@ -138,40 +138,40 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   // fProtonParticleGun->SetParticleDefinition(proton);
   // fProtonParticleGun->SetParticleEnergy(G4RandGauss::shoot(16,2)*MeV);
 
-  G4int generate_electrons = 0; // 0 - do not generate conversion electrons, 1 - generate CEs
+  G4int generate_electrons = 1; // 0 - do not generate conversion electrons, 1 - generate CEs
   
   if(generate_electrons == 1){
     fElectronParticleGun->SetParticlePosition(posGun);
     fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
     fElectronParticleGun->SetParticleDefinition(electron);
-  }
 
   G4double conversionTypePercent = G4UniformRand();
 
   // if(G4UniformRand()<0.5) {
-    electronEnergy = 100;
-    fElectronParticleGun->SetParticlePosition(posGun);
-    fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
-    fElectronParticleGun->SetParticleDefinition(electron);
-    fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
-    fElectronParticleGun->GeneratePrimaryVertex(anEvent);
-  // }
-
-  // if(G4UniformRand()<totalICC/(totalICC+1.))
-  // {
-  //   if(conversionTypePercent < (K_ICC/totalICC)){
-  //     electronEnergy = elKEnergy;
-  //   }
-  //   else if(conversionTypePercent > (K_ICC/totalICC) && conversionTypePercent < (L_ICC/totalICC + K_ICC/totalICC)){
-  //     electronEnergy = elLEnergy;
-  //   }
-  //   else {
-  //     electronEnergy = elMEnergy;
-  //   }
-  //   // electronEnergy = G4RandGauss::shoot(electronEnergy,10);
+  //   electronEnergy = 100;
+  //   fElectronParticleGun->SetParticlePosition(posGun);
+  //   fElectronParticleGun->SetParticleMomentumDirection(dirElGun);
+  //   fElectronParticleGun->SetParticleDefinition(electron);
   //   fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
   //   fElectronParticleGun->GeneratePrimaryVertex(anEvent);
   // }
+
+  if(G4UniformRand()<totalICC/(totalICC+1.))
+  {
+    if(conversionTypePercent < (K_ICC/totalICC)){
+      electronEnergy = elKEnergy;
+    }
+    else if(conversionTypePercent > (K_ICC/totalICC) && conversionTypePercent < (L_ICC/totalICC + K_ICC/totalICC)){
+      electronEnergy = elLEnergy;
+    }
+    else {
+      electronEnergy = elMEnergy;
+    }
+    // electronEnergy = G4RandGauss::shoot(electronEnergy,10);
+    fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
+    fElectronParticleGun->GeneratePrimaryVertex(anEvent);
+  }
+  }
 
   fMainParticleGun->SetParticleEnergy(particleEnergy*keV);
   fMainParticleGun->SetParticlePosition(posGun);
