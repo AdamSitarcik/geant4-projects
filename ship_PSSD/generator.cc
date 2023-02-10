@@ -66,12 +66,12 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4double dirZ = G4UniformRand()-0.5;
 
   // Input and calculation of parameters of electrons in case of IC simulations
-  // custom gate
-  G4double particleEnergy = 7200; // in keV
-  G4double convTransitionEnergy = 200;
-  G4double totalICC = 1.203;
-  G4double K_ICC = 0.984;
-  G4double KL_ratio = 5.88;
+  // // custom gate
+  // G4double particleEnergy = 7200; // in keV
+  // G4double convTransitionEnergy = 200;
+  // G4double totalICC = 1.203;
+  // G4double K_ICC = 0.984;
+  // G4double KL_ratio = 5.88;
 
   // // 108kev gate
   // G4double particleEnergy = 7120; // in keV
@@ -101,12 +101,12 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   // G4double K_ICC = 1.322;
   // G4double KL_ratio = 5.87;
 
-  // // 255kev gate
-  // G4double particleEnergy = 7263; // in keV
-  // G4double convTransitionEnergy = 108;
-  // G4double totalICC = 0.355;
-  // G4double K_ICC = 0.283;
-  // G4double KL_ratio = 5.16;
+  // 255kev gate
+  G4double particleEnergy = 7130; // in keV
+  G4double convTransitionEnergy = 195;
+  G4double totalICC = 1.291;
+  G4double K_ICC = 1.057;
+  G4double KL_ratio = 5.88;
 
   G4double bindingK = 85.53;
   G4double bindingL = 14.2;
