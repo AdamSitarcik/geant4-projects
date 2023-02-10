@@ -90,7 +90,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     }
 
     solidTarget = new G4Box("solidTarget", targetXY/2., targetXY/2., targetThickness/2.);
-    logicTarget = new G4LogicalVolume(solidTarget, rhodium, "logicTarget");
+    logicTarget = new G4LogicalVolume(solidTarget, ruthenium, "logicTarget");
     physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition), logicTarget, "physTarget", logicWorld, false, 0, true);
 
     solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThicknessBehindTarget/2.);

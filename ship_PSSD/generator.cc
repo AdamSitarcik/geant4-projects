@@ -30,15 +30,19 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
 
 void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 {
-  // ionZ = 26;
-  // ionA = 56;
-  // G4double ion_kinetic_energy = 70.;
+  ionZ = 40;
+  ionA = 90;
+  G4double ionKineticEnergy = 438.;
 
   G4double impDepth = 8.; // in um
+  G4double ionGunZ = 10*mm;
+  
+  G4ThreeVector posIonGun(0., 0., ionGunZ);
+  G4ThreeVector dirIonGun(0., 0., -1.);
 
   G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
 
-  // G4ParticleDefinition *ion = G4IonTable::GetIonTable()->GetIon(ionZ, ionA, 0.);
+  G4ParticleDefinition *ion = G4IonTable::GetIonTable()->GetIon(ionZ, ionA, 0.);
 
   G4ParticleDefinition *electron = particleTable->FindParticle("e-");
   G4ParticleDefinition *alpha = particleTable->FindParticle("alpha");
@@ -131,7 +135,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4ThreeVector dirRtg2Gun(dirXrtg2, dirYrtg2, dirZrtg2);
   G4ThreeVector dirRemEnGun(dirXRemainingEn, dirYRemainingEn, dirZRemainingEn);
 
-  G4int generate_electrons = 1; // 0 - do not generate conversion electrons; 1 - generate CEs
+  G4int generate_electrons = 0; // 0 - do not generate conversion electrons; 1 - generate CEs
   G4int generateRTGs = 1; // 0 - generate CEs without characteristic RTGs; 1 - generate CEs also with characteristic RTGs
   
   if(generate_electrons == 1){
@@ -158,7 +162,6 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
       {
         if(conversionTypePercent < (K_ICC/totalICC)){
           electronEnergy = elKEnergy;
-          // vacantK = true;
           if(G4UniformRand()<0.787) { // Kalfa RTG 
             rtgEn1 = 72.1;
             if(G4UniformRand()<0.26){
@@ -202,7 +205,6 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
 
       }
     }
-
     else{
       if(G4UniformRand()<totalICC/(totalICC+1.)) {
         if(conversionTypePercent < (K_ICC/totalICC)){
@@ -221,13 +223,17 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
     fElectronParticleGun->SetParticleEnergy(electronEnergy*keV);
     fElectronParticleGun->GeneratePrimaryVertex(anEvent);
   }
+  fIonParticleGun->SetParticleEnergy(ionKineticEnergy*MeV);
+  fIonParticleGun->SetParticlePosition(posIonGun);
+  fIonParticleGun->SetParticleMomentumDirection(dirIonGun);
+  fIonParticleGun->SetParticleDefinition(ion);
 
   fMainParticleGun->SetParticleEnergy(particleEnergy*keV);
   fMainParticleGun->SetParticlePosition(posGun);
   fMainParticleGun->SetParticleMomentumDirection(dirMainGun);
   fMainParticleGun->SetParticleDefinition(alpha);
 
-  fMainParticleGun->GeneratePrimaryVertex(anEvent);
-  // fIonParticleGun->GeneratePrimaryVertex(anEvent);
+  // fMainParticleGun->GeneratePrimaryVertex(anEvent);
+  fIonParticleGun->GeneratePrimaryVertex(anEvent);
   // fProtonParticleGun->GeneratePrimaryVertex(anEvent);
 }
