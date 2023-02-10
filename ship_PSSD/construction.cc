@@ -26,9 +26,10 @@ MyDetectorConstruction::MyDetectorConstruction()
 
   targetXY = 5*mm;
   // targetThickness = 1.106*um; // SmF3
-  targetThickness = 2.066*um; // PrF3
+  // targetThickness = 2.066*um; // PrF3
+  targetThickness = 0.48*um; // Ru/Rh 600ug/cm2
 
-  targetPosition = 50.*mm;
+  targetPosition = 5.*mm;
   targetPositionIonLoss = 10.*mm;
 
   carbonLayerThicknessBehindTarget = 0.18*um;
@@ -49,14 +50,16 @@ void MyDetectorConstruction::DefineMaterial()
   germanium = nist->FindOrBuildMaterial("G4_Ge");
   carbon = nist->FindOrBuildMaterial("G4_C");
   mylar = nist->FindOrBuildMaterial("G4_MYLAR");
+  rhodium = nist->FindOrBuildMaterial("G4_Rh"); // Z=45
+  ruthenium = nist->FindOrBuildMaterial("G4_Ru"); // Z=44
 
   // targetMat = new G4Material("targetMat", 2.7133*g/cm3, 2); // SmF3
   // targetMat->AddElement(nist->FindOrBuildElement("Sm"), 1);
   // targetMat->AddElement(nist->FindOrBuildElement("F"), 3);
 
-  targetMat = new G4Material("targetMat", 2.5266*g/cm3, 2); // PrF3
-  targetMat->AddElement(nist->FindOrBuildElement("Pr"), 1);
-  targetMat->AddElement(nist->FindOrBuildElement("F"), 3);
+  // targetMat = new G4Material("targetMat", 2.5266*g/cm3, 1); // PrF3
+  // targetMat->AddElement(nist->FindOrBuildElement("Pr"), 1);
+  // targetMat->AddElement(nist->FindOrBuildElement("F"), 3);
 
 }
 
@@ -87,8 +90,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     }
 
     solidTarget = new G4Box("solidTarget", targetXY/2., targetXY/2., targetThickness/2.);
-    // logicTarget = new G4LogicalVolume(solidTarget, targetMat, "logicTarget");
-    // physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition), logicTarget, "physTarget", logicWorld, false, 0, true);
+    logicTarget = new G4LogicalVolume(solidTarget, rhodium, "logicTarget");
+    physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition), logicTarget, "physTarget", logicWorld, false, 0, true);
 
     solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThicknessBehindTarget/2.);
     // logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");

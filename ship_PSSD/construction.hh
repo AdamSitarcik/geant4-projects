@@ -27,7 +27,7 @@ public:
   virtual void ConstructSDandField();
 
 private:
-  G4Material *vacuum, *silicon, *germanium, *carbon, *mylar, *targetMat;
+  G4Material *vacuum, *silicon, *germanium, *carbon, *mylar, *targetMat, *rhodium, *ruthenium;
   G4Box *solidWorld, *solidDetector_PSSD, *solidDetector_Veto, *solidTOF, *solidMylar, *solidTarget, *solidCLayer;
   G4Tubs *solidDetector_Ge;
   G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicDetector_Veto, *logicTOF, *logicMylar, *logicTarget, *logicCLayer;
