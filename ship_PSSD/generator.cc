@@ -135,7 +135,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   G4ThreeVector dirRtg2Gun(dirXrtg2, dirYrtg2, dirZrtg2);
   G4ThreeVector dirRemEnGun(dirXRemainingEn, dirYRemainingEn, dirZRemainingEn);
 
-  G4int generate_electrons = 0; // 0 - do not generate conversion electrons; 1 - generate CEs
+  G4int generate_electrons = 1; // 0 - do not generate conversion electrons; 1 - generate CEs
   G4int generateRTGs = 1; // 0 - generate CEs without characteristic RTGs; 1 - generate CEs also with characteristic RTGs
   
   if(generate_electrons == 1){
@@ -233,7 +233,7 @@ void MyPrimaryGenerator::GeneratePrimaries (G4Event *anEvent)
   fMainParticleGun->SetParticleMomentumDirection(dirMainGun);
   fMainParticleGun->SetParticleDefinition(alpha);
 
-  // fMainParticleGun->GeneratePrimaryVertex(anEvent);
-  fIonParticleGun->GeneratePrimaryVertex(anEvent);
+  fMainParticleGun->GeneratePrimaryVertex(anEvent);
+  // fIonParticleGun->GeneratePrimaryVertex(anEvent);
   // fProtonParticleGun->GeneratePrimaryVertex(anEvent);
 }
