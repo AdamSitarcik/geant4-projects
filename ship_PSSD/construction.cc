@@ -10,7 +10,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 
   pssdWidth = 5*mm;
   pssdLength = 35*mm;
-  pssdThickness = 0.3*mm;
+  pssdThickness = 3.*mm;
 
   n_tof = 1;
   tofWidth = 7*mm;
@@ -27,10 +27,15 @@ MyDetectorConstruction::MyDetectorConstruction()
   targetXY = 5*mm;
   // targetThickness = 1.106*um; // SmF3
   // targetThickness = 2.066*um; // PrF3
-  targetThickness = 0.48*um; // Ru/Rh 600ug/cm2
+  targetThickness = 0.40*um; // Ru/Rh 500ug/cm2
 
-  targetPosition = 5.*mm;
+  targetPosition = 10.*mm;
   targetPositionIonLoss = 10.*mm;
+
+  copperThickness = 2.8*um;
+  copperPosition = (targetPosition-targetThickness/2.-copperThickness/2.)*mm;
+
+  G4cout << "THICKNESS    " << targetThickness << "\t" << copperPosition << "\t" << copperThickness << G4endl;
 
   carbonLayerThicknessBehindTarget = 0.18*um;
   carbonLayerThicknessInFrontTarget = 0.045*um;
@@ -52,6 +57,7 @@ void MyDetectorConstruction::DefineMaterial()
   mylar = nist->FindOrBuildMaterial("G4_MYLAR");
   rhodium = nist->FindOrBuildMaterial("G4_Rh"); // Z=45
   ruthenium = nist->FindOrBuildMaterial("G4_Ru"); // Z=44
+  copper = nist->FindOrBuildMaterial("G4_Cu"); // Z = 29
 
   // targetMat = new G4Material("targetMat", 2.7133*g/cm3, 2); // SmF3
   // targetMat->AddElement(nist->FindOrBuildElement("Sm"), 1);
@@ -70,8 +76,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
 
   solidDetector_PSSD = new G4Box("solidDetector_PSSD", pssdWidth/2, pssdLength/2, pssdThickness/2);
-  logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, silicon, "logicDetector_PSSD");
-  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
+  logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, copper, "logicDetector_PSSD");
+  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
 
   // if(projectile_loses_in_target == 0)
   // {
@@ -93,7 +99,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     logicTarget = new G4LogicalVolume(solidTarget, ruthenium, "logicTarget");
     physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition), logicTarget, "physTarget", logicWorld, false, 0, true);
 
-    solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThicknessBehindTarget/2.);
+    solidCuLayer = new G4Box("solidTarget", targetXY/2., targetXY/2., copperThickness/2.);
+    logicCuLayer = new G4LogicalVolume(solidCuLayer, copper, "logicCuLayer");
+    physCuLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition-targetThickness/2.-copperThickness/2.), logicCuLayer, "physCuLayer", logicWorld, false, 0, true);
+
+    // solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThicknessBehindTarget/2.);
     // logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");
     // physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition-targetThickness/2.-carbonLayerThicknessBehindTarget/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
   // }
