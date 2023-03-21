@@ -4,47 +4,45 @@ MyDetectorConstruction::MyDetectorConstruction()
 {
   projectile_loses_in_target = 0; // 0 - includes TOF, C foils and mylars. 1 - only half of the target and PSSD generated
 
-  xWorld = 200*mm;
-  yWorld = 200*mm;
-  zWorld = 400*mm;
+  xWorld = 200 * mm;
+  yWorld = 200 * mm;
+  zWorld = 400 * mm;
 
-  pssdWidth = 5*mm;
-  pssdLength = 35*mm;
-  pssdThickness = 3.*mm;
+  pssdWidth = 5. * mm;
+  pssdLength = 35. * mm;
+  pssdThickness = 0.3 * mm;
 
   n_tof = 1;
-  tofWidth = 7*mm;
-  tofLength = 7*mm;
+  tofWidth = 7 * mm;
+  tofLength = 7 * mm;
   // tofThickness = 0.15*um;
-  tofThickness = 1.5*um;
-
+  tofThickness = 1.5 * um;
 
   n_mylar = 1;
-  mylarWidth = 10*mm;
-  mylarLength = 10*mm;
-  mylarThickness = 0.01*um;
+  mylarWidth = 10 * mm;
+  mylarLength = 10 * mm;
+  mylarThickness = 0.01 * um;
 
-  targetXY = 5*mm;
+  targetXY = 5 * mm;
   // targetThickness = 1.106*um; // SmF3
   // targetThickness = 2.066*um; // PrF3
-  targetThickness = 0.40*um; // Ru/Rh 500ug/cm2
+  targetThickness = 0.40 * um; // Ru/Rh 500ug/cm2
 
-  targetPosition = 10.*mm;
-  targetPositionIonLoss = 10.*mm;
+  targetPosition = 10. * mm;
+  targetPositionIonLoss = 10. * mm;
 
-  copperThickness = 2.8*um;
-  copperPosition = (targetPosition-targetThickness/2.-copperThickness/2.)*mm;
+  copperThickness = 2.8 * um;
+  copperPosition = (targetPosition - targetThickness / 2. - copperThickness / 2.) * mm;
 
-  G4cout << "THICKNESS    " << targetThickness << "\t" << copperPosition << "\t" << copperThickness << G4endl;
-
-  carbonLayerThicknessBehindTarget = 0.18*um;
-  carbonLayerThicknessInFrontTarget = 0.045*um;
+  carbonLayerThicknessBehindTarget = 0.18 * um;
+  carbonLayerThicknessInFrontTarget = 0.045 * um;
 
   DefineMaterial();
 }
 
 MyDetectorConstruction::~MyDetectorConstruction()
-{}
+{
+}
 
 void MyDetectorConstruction::DefineMaterial()
 {
@@ -55,9 +53,9 @@ void MyDetectorConstruction::DefineMaterial()
   germanium = nist->FindOrBuildMaterial("G4_Ge");
   carbon = nist->FindOrBuildMaterial("G4_C");
   mylar = nist->FindOrBuildMaterial("G4_MYLAR");
-  rhodium = nist->FindOrBuildMaterial("G4_Rh"); // Z=45
+  rhodium = nist->FindOrBuildMaterial("G4_Rh");   // Z=45
   ruthenium = nist->FindOrBuildMaterial("G4_Ru"); // Z=44
-  copper = nist->FindOrBuildMaterial("G4_Cu"); // Z = 29
+  copper = nist->FindOrBuildMaterial("G4_Cu");    // Z = 29
 
   // targetMat = new G4Material("targetMat", 2.7133*g/cm3, 2); // SmF3
   // targetMat->AddElement(nist->FindOrBuildElement("Sm"), 1);
@@ -66,7 +64,6 @@ void MyDetectorConstruction::DefineMaterial()
   // targetMat = new G4Material("targetMat", 2.5266*g/cm3, 1); // PrF3
   // targetMat->AddElement(nist->FindOrBuildElement("Pr"), 1);
   // targetMat->AddElement(nist->FindOrBuildElement("F"), 3);
-
 }
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
@@ -75,37 +72,40 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   logicWorld = new G4LogicalVolume(solidWorld, vacuum, "logicWorld");
   physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
 
-  solidDetector_PSSD = new G4Box("solidDetector_PSSD", pssdWidth/2, pssdLength/2, pssdThickness/2);
-  logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, copper, "logicDetector_PSSD");
-  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
+  solidDetector_PSSD = new G4Box("solidDetector_PSSD", pssdWidth / 2, pssdLength / 2, pssdThickness / 2);
+  logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, silicon, "logicDetector_PSSD");
+  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness / 2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
 
   // if(projectile_loses_in_target == 0)
   // {
-    solidTOF = new G4Box("solidTOF", tofWidth/2., tofLength/2., tofThickness/2.);
-    logicTOF = new G4LogicalVolume(solidTOF, carbon, "logicTOF");
-    for(G4int i = 0; i<n_tof; i++){
-      for(G4int j=0; j<1; j++){
-        // physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (15.+8*i+2*j)*mm), logicTOF, "physTOF", logicWorld, false, 0, true);
-      }
+  solidTOF = new G4Box("solidTOF", tofWidth / 2., tofLength / 2., tofThickness / 2.);
+  logicTOF = new G4LogicalVolume(solidTOF, carbon, "logicTOF");
+  for (G4int i = 0; i < n_tof; i++)
+  {
+    for (G4int j = 0; j < 1; j++)
+    {
+      // physTOF = new G4PVPlacement(0, G4ThreeVector(0., 0., (15.+8*i+2*j)*mm), logicTOF, "physTOF", logicWorld, false, 0, true);
     }
+  }
 
-    solidMylar = new G4Box("solidMylar", mylarWidth/2., mylarLength/2., mylarThickness/2.);
-    logicMylar = new G4LogicalVolume(solidMylar, mylar, "logicMylar");
-    for(G4int i=0; i<n_mylar; i++){
-      // physMylar = new G4PVPlacement(0, G4ThreeVector(0., 0., (5+2*i)*mm), logicMylar, "physMylar", logicWorld, false, 0, true);
-    }
+  solidMylar = new G4Box("solidMylar", mylarWidth / 2., mylarLength / 2., mylarThickness / 2.);
+  logicMylar = new G4LogicalVolume(solidMylar, mylar, "logicMylar");
+  for (G4int i = 0; i < n_mylar; i++)
+  {
+    // physMylar = new G4PVPlacement(0, G4ThreeVector(0., 0., (5+2*i)*mm), logicMylar, "physMylar", logicWorld, false, 0, true);
+  }
 
-    solidTarget = new G4Box("solidTarget", targetXY/2., targetXY/2., targetThickness/2.);
-    logicTarget = new G4LogicalVolume(solidTarget, ruthenium, "logicTarget");
-    physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition), logicTarget, "physTarget", logicWorld, false, 0, true);
+  solidTarget = new G4Box("solidTarget", targetXY / 2., targetXY / 2., targetThickness / 2.);
+  logicTarget = new G4LogicalVolume(solidTarget, ruthenium, "logicTarget");
+  // physTarget = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition), logicTarget, "physTarget", logicWorld, false, 0, true);
 
-    solidCuLayer = new G4Box("solidTarget", targetXY/2., targetXY/2., copperThickness/2.);
-    logicCuLayer = new G4LogicalVolume(solidCuLayer, copper, "logicCuLayer");
-    physCuLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition-targetThickness/2.-copperThickness/2.), logicCuLayer, "physCuLayer", logicWorld, false, 0, true);
+  solidCuLayer = new G4Box("solidTarget", targetXY / 2., targetXY / 2., copperThickness / 2.);
+  logicCuLayer = new G4LogicalVolume(solidCuLayer, copper, "logicCuLayer");
+  // physCuLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition - targetThickness / 2. - copperThickness / 2.), logicCuLayer, "physCuLayer", logicWorld, false, 0, true);
 
-    // solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThicknessBehindTarget/2.);
-    // logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");
-    // physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition-targetThickness/2.-carbonLayerThicknessBehindTarget/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
+  // solidCLayer = new G4Box("solidCLayer", targetXY/2., targetXY/2., carbonLayerThicknessBehindTarget/2.);
+  // logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");
+  // physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPosition-targetThickness/2.-carbonLayerThicknessBehindTarget/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
   // }
   // else if(projectile_loses_in_target == 1)
   // {
@@ -117,7 +117,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   //   logicCLayer = new G4LogicalVolume(solidCLayer, carbon, "logicCLayer");
   //   physCLayer = new G4PVPlacement(0, G4ThreeVector(0., 0., targetPositionIonLoss+targetThickness/2.+carbonLayerThicknessInFrontTarget/2.), logicCLayer, "physCLayer", logicWorld, false, 0, true);
   // }
-  solidDetector_Veto= new G4Box("solidDetector_Veto", pssdWidth/2*16, pssdLength/2, pssdThickness/2);
+  solidDetector_Veto = new G4Box("solidDetector_Veto", pssdWidth / 2 * 16, pssdLength / 2, pssdThickness / 2);
   logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, silicon, "logicDetector_Veto");
   // physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
 

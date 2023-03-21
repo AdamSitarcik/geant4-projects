@@ -8,6 +8,7 @@
 #include "G4ParticleTable.hh"
 #include "G4IonTable.hh"
 #include "Randomize.hh"
+#include "G4Geantino.hh"
 
 class MyPrimaryGenerator : public G4VUserPrimaryGeneratorAction
 {
@@ -15,10 +16,10 @@ public:
   MyPrimaryGenerator();
   ~MyPrimaryGenerator();
 
-  virtual void GeneratePrimaries(G4Event*);
+  virtual void GeneratePrimaries(G4Event *);
 
 private:
-  G4ParticleGun *fElectronParticleGun, *fMainParticleGun, *fIonParticleGun, *fProtonParticleGun, *fRtg1ParticleGun, *fRtg2ParticleGun, *fRemainingEnParticleGun;
+  G4ParticleGun *fParticleGun;
 
   G4int ionZ, ionA;
 };
