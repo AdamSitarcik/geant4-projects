@@ -11,21 +11,28 @@
 class MyEventAction : public G4UserEventAction
 {
 public:
-  MyEventAction(MyRunAction*);
+  MyEventAction(MyRunAction *);
   ~MyEventAction();
 
-  virtual void BeginOfEventAction(const G4Event*);
-  virtual void EndOfEventAction(const G4Event*);
+  virtual void BeginOfEventAction(const G4Event *);
+  virtual void EndOfEventAction(const G4Event *);
 
-  void AddEdep(G4double edep) {
+  void AddEdep(G4double edep)
+  {
     fEdep += edep;
   }
 
-  void AddEVeto(G4double eveto) {
+  void AddEVeto(G4double eveto)
+  {
     fEVeto += eveto;
   }
 
+  void AddEGamma(G4double egamma)
+  {
+    fEGa += egamma;
+  }
+
 private:
-  G4double fEdep, fEVeto;
+  G4double fEdep, fEVeto, fEGa;
 };
 #endif

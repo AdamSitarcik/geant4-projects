@@ -12,6 +12,9 @@ MyDetectorConstruction::MyDetectorConstruction()
   pssdLength = 35. * mm;
   pssdThickness = 0.3 * mm;
 
+  geRadius = 35 * mm;
+  geLength = 140 * mm;
+
   n_tof = 1;
   tofWidth = 7 * mm;
   tofLength = 7 * mm;
@@ -121,12 +124,13 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, silicon, "logicDetector_Veto");
   // physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
 
-  // solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0*mm, 35*mm, 140*mm/2, 0., 360*deg);
-  // logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, germanium, "logicDetector_Ge");
-  // G4VPhysicalVolume *physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., -72*mm), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);
+  solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0 * mm, geRadius, geLength / 2., 0., 360 * deg);
+  logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, germanium, "logicDetector_Ge");
+  physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness - geLength / 2.0 - 5 * mm), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);
 
   fScoringVolumePSSD = logicDetector_PSSD;
   fScoringVolumeVeto = logicDetector_Veto;
+  fScoringVolumeGe = logicDetector_Ge;
 
   return physWorld;
 }
@@ -135,7 +139,9 @@ void MyDetectorConstruction::ConstructSDandField()
 {
   MySensitiveDetector *sensDet1 = new MySensitiveDetector("SensitiveDetector1");
   MySensitiveDetector *sensDet2 = new MySensitiveDetector("SensitiveDetector2");
+  MySensitiveDetector *sensDet3 = new MySensitiveDetector("SensitiveDetector3");
 
   logicDetector_PSSD->SetSensitiveDetector(sensDet1);
   logicDetector_Veto->SetSensitiveDetector(sensDet2);
+  logicDetector_Ge->SetSensitiveDetector(sensDet3);
 }
