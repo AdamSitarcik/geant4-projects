@@ -1,8 +1,7 @@
 /run/initialize
 
-/process/had/rdm/setPhotoEvaporationFile 81 182 ../UserData/UserEvapData_z81.a182
 
 /gun/particle ion
 /gun/ion 81 182 0 108.
 
-/run/beamOn 50000
+/run/beamOn 250000

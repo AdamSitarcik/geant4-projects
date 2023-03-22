@@ -3,6 +3,6 @@
 /process/had/rdm/setPhotoEvaporationFile 101 253 ../UserData/UserEvapData_z101.a253
 
 /gun/particle ion
-/gun/ion 101 253 0 454. 
+/gun/ion 101 253 0 454.
 
-/run/beamOn 500000
+/run/beamOn 300000
