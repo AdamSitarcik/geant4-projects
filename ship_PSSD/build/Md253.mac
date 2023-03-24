@@ -1,8 +1,11 @@
+/run/numberOfThreads 6
+
 /run/initialize
 
-/process/had/rdm/setPhotoEvaporationFile 101 253 ../UserData/UserEvapData_z101.a253
+/process/had/rdm/setPhotoEvaporationFile 101 253 ../UserData/z101.a253_323e2_394e2_454e2
 
 /gun/particle ion
 /gun/ion 101 253 0 454.
 
-/run/beamOn 300000
+/run/printProgress 5000
+/run/beamOn 50000
