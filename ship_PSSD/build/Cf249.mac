@@ -1,0 +1,12 @@
+/run/numberOfThreads 6
+
+/run/initialize
+
+/process/had/rdm/setPhotoEvaporationFile 98 249 ../UserData/z98.a249
+/process/had/rdm/setRadioactiveDecayFile 98 249 ../UserData/no_subsequent_decay
+
+/gun/particle ion
+/gun/ion 98 249 0 145
+
+/run/printProgress 10000
+/run/beamOn 250000

@@ -2,10 +2,11 @@
 
 /run/initialize
 
-/process/had/rdm/setPhotoEvaporationFile 101 253 ../UserData/z101.a253_323e2_394e2_454e2
+/process/had/rdm/setPhotoEvaporationFile 101 253 ../UserData/z101.a253_rot
+/process/had/rdm/setRadioactiveDecayFile 101 253 ../UserData/no_subsequent_decay
 
 /gun/particle ion
-/gun/ion 101 253 0 454.
+/gun/ion 101 253 0 216.
 
-/run/printProgress 5000
-/run/beamOn 50000
+/run/printProgress 10000
+/run/beamOn 100000
