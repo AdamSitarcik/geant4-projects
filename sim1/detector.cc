@@ -16,7 +16,7 @@ MySensitiveDetector::MySensitiveDetector(G4String name) : G4VSensitiveDetector(n
     if(datafile.eof())
       break;
 
-    G4cout << wlen << "\t" << queff << G4endl;
+    // G4cout << wlen << "\t" << queff << G4endl;
 
     quEff->InsertValues(wlen, queff/100.);
   }
