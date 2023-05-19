@@ -27,14 +27,13 @@ public:
   virtual void ConstructSDandField();
 
 private:
-  G4Material *vacuum, *silicon, *germanium, *carbon, *mylar, *targetMat, *rhodium, *ruthenium, *copper;
-  G4Box *solidWorld, *solidDetector_PSSD, *solidDetector_Veto, *solidTOF, *solidMylar, *solidTarget, *solidCLayer,*solidCuLayer;
+  G4Material *vacuum, *silicon, *germanium;
+  G4Box *solidWorld, *solidDetector_PSSD, *solidDetector_Veto;
   G4Tubs *solidDetector_Ge;
-  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicDetector_Veto, *logicTOF, *logicMylar, *logicTarget, *logicCLayer, *logicCuLayer;
-  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge, *physDetector_Veto, *physTOF, *physMylar, *physTarget, *physCLayer, *physCuLayer;
+  G4LogicalVolume *logicWorld, *logicDetector_PSSD, *logicDetector_Ge, *logicDetector_Veto;
+  G4VPhysicalVolume *physWorld, *physDetector_PSSD, *physDetector_Ge, *physDetector_Veto;
 
-  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld, tofWidth, tofLength, tofThickness, mylarWidth, mylarLength, mylarThickness, targetXY, targetThickness, carbonLayerThicknessBehindTarget, carbonLayerThicknessInFrontTarget, targetPosition, targetPositionIonLoss, copperThickness, copperPosition, geRadius, geLength ;
-  G4int projectile_loses_in_target, n_tof, n_mylar;
+  G4double pssdWidth, pssdLength, pssdThickness, xWorld, yWorld, zWorld, geRadius, geLength ;
 
   void DefineMaterial();
 
