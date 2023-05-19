@@ -13,6 +13,14 @@ MyDetectorConstruction::MyDetectorConstruction()
   geRadius = 35 * mm;
   geLength = 140 * mm;
 
+  windowThickness = 1 * mm;
+  windowRadius = 35 * mm;
+
+  pssdPosition = pssdThickness / 2;
+  windowPosition = pssdThickness + 12 * mm + windowThickness / 2;
+  gePosition = 5 * mm + windowPosition + geLength / 2;
+  vetoPosition = pssdPosition + pssdThickness / 2 + 1 * mm;
+
   DefineMaterial();
 }
 
@@ -27,7 +35,7 @@ void MyDetectorConstruction::DefineMaterial()
   vacuum = nist->FindOrBuildMaterial("G4_Galactic");
   silicon = nist->FindOrBuildMaterial("G4_Si");
   germanium = nist->FindOrBuildMaterial("G4_Ge");
-  carbon = nist->FindOrBuildMaterial("G4_C");
+  aluminum = nist->FindOrBuildMaterial("G4_Al");
 }
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
@@ -38,16 +46,19 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
   solidDetector_PSSD = new G4Box("solidDetector_PSSD", pssdWidth / 2, pssdLength / 2, pssdThickness / 2);
   logicDetector_PSSD = new G4LogicalVolume(solidDetector_PSSD, silicon, "logicDetector_PSSD");
-  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness / 2), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
-
+  physDetector_PSSD = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdPosition), logicDetector_PSSD, "physDetector_PSSD", logicWorld, false, 0, true);
 
   solidDetector_Veto = new G4Box("solidDetector_Veto", pssdWidth / 2 * 16, pssdLength / 2, pssdThickness / 2);
   logicDetector_Veto = new G4LogicalVolume(solidDetector_Veto, silicon, "logicDetector_Veto");
-  // physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness/2 - 5*mm), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
+  physDetector_Veto = new G4PVPlacement(0, G4ThreeVector(0., 0., -vetoPosition), logicDetector_Veto, "physDetector_Veto", logicWorld, false, 0, true);
+
+  solidAlWindow = new G4Tubs("solidAlWindow", 0 * mm, windowRadius, windowThickness / 2., 0., 360 * deg);
+  logicAlWindow = new G4LogicalVolume(solidAlWindow, aluminum, "logicAlWindow");
+  physAlWindow = new G4PVPlacement(0, G4ThreeVector(0., 0., -windowPosition), logicAlWindow, "physAlWindow", logicWorld, false, 0, true);
 
   solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0 * mm, geRadius, geLength / 2., 0., 360 * deg);
   logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, germanium, "logicDetector_Ge");
-  physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., -pssdThickness - geLength / 2.0 - 5 * mm), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);
+  physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., -gePosition), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);
 
   fScoringVolumePSSD = logicDetector_PSSD;
   fScoringVolumeVeto = logicDetector_Veto;
