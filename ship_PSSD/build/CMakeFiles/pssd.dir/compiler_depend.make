@@ -1950,11 +1950,8 @@ CMakeFiles/pssd.dir/detector.cc.o: ../detector.cc \
 
 CMakeFiles/pssd.dir/event.cc.o: ../event.cc \
   /usr/include/stdc-predef.h \
-  ../event.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UserEventAction.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Event.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/globals.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4ios.hh \
+  ../run.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UserRunAction.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Types.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4GlobalConfig.hh \
   /usr/include/c++/11/complex \
@@ -2163,6 +2160,14 @@ CMakeFiles/pssd.dir/event.cc.o: ../event.cc \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/tls.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AnalysisManager.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4GenericAnalysisManager.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4ToolsAnalysisManager.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VAnalysisManager.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AnalysisManagerState.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AnalysisVerbose.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/globals.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4ios.hh \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/utility \
@@ -2235,38 +2240,6 @@ CMakeFiles/pssd.dir/event.cc.o: ../event.cc \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/bits/std_mutex.h \
   /usr/include/c++/11/bits/unique_lock.h \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/evtdefs.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Allocator.hh \
-  /usr/include/c++/11/cstddef \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AllocatorPool.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4PrimaryVertex.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/pwdefs.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4ThreeVector.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Utility/defs.h \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4PrimaryParticle.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4HCofThisEvent.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VHitsCollection.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4DCofThisEvent.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VDigiCollection.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4TrajectoryContainer.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VTrajectory.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VUserEventInformation.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Profiler.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Profiler.icc \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/PTL/Globals.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/PTL/Types.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/PTL/Utility.hh \
-  /usr/include/c++/11/set \
-  /usr/include/c++/11/bits/stl_set.h \
-  /usr/include/c++/11/bits/stl_multiset.h \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AnalysisManager.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4GenericAnalysisManager.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4ToolsAnalysisManager.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VAnalysisManager.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AnalysisManagerState.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AnalysisVerbose.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Threading.hh \
   /usr/include/c++/11/condition_variable \
   /usr/include/c++/11/bits/shared_ptr.h \
@@ -2323,6 +2296,10 @@ CMakeFiles/pssd.dir/event.cc.o: ../event.cc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UIparameter.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UItokenNum.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4ApplicationState.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4ThreeVector.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Utility/defs.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4THnToolsManager.icc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4THnMessenger.icc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Tokenizer.hh \
@@ -2353,6 +2330,32 @@ CMakeFiles/pssd.dir/event.cc.o: ../event.cc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4GenericAnalysisManager.icc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4GenericFileManager.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4GenericFileManager.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Run.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Profiler.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Profiler.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/PTL/Globals.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/PTL/Types.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/PTL/Utility.hh \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  /usr/include/c++/11/cstddef \
+  ../event.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UserEventAction.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Event.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/evtdefs.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Allocator.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AllocatorPool.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4PrimaryVertex.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/pwdefs.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4PrimaryParticle.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4HCofThisEvent.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VHitsCollection.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4DCofThisEvent.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VDigiCollection.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4TrajectoryContainer.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VTrajectory.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VUserEventInformation.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/Randomize.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/Randomize.h \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/DualRand.h \
@@ -2399,10 +2402,7 @@ CMakeFiles/pssd.dir/event.cc.o: ../event.cc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandPoisson.icc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandPoissonQ.icc \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandStudentT.h \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandStudentT.icc \
-  ../run.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UserRunAction.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Run.hh
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandStudentT.icc
 
 CMakeFiles/pssd.dir/generator.cc.o: ../generator.cc \
   /usr/include/stdc-predef.h \
@@ -3732,7 +3732,70 @@ CMakeFiles/pssd.dir/run.cc.o: ../run.cc \
   /usr/include/c++/11/set \
   /usr/include/c++/11/bits/stl_set.h \
   /usr/include/c++/11/bits/stl_multiset.h \
-  /usr/include/c++/11/cstddef
+  /usr/include/c++/11/cstddef \
+  ../event.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UserEventAction.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Event.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/evtdefs.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Allocator.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4AllocatorPool.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4PrimaryVertex.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/pwdefs.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4PrimaryParticle.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4HCofThisEvent.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VHitsCollection.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4DCofThisEvent.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VDigiCollection.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4TrajectoryContainer.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VTrajectory.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4VUserEventInformation.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/Randomize.hh \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/Randomize.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/DualRand.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandomEngine.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandomEngine.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/JamesRandom.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/MixMaxRng.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/MTwistEngine.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RanecuEngine.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RanluxEngine.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/Ranlux64Engine.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RanluxppEngine.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RanshiEngine.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandBinomial.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/Random.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/Random.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Utility/memory.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandBinomial.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandBreitWigner.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandFlat.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Utility/thread_local.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandFlat.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandBreitWigner.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandChiSquare.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandChiSquare.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandExponential.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandExponential.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandExpZiggurat.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandBit.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandBit.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGamma.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGamma.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGauss.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGauss.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGaussQ.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGaussQ.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGaussZiggurat.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGeneral.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandGeneral.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandLandau.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandLandau.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandPoissonQ.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandPoisson.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandPoisson.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandPoissonQ.icc \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandStudentT.h \
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/CLHEP/Random/RandStudentT.icc
 
 CMakeFiles/pssd.dir/ship_pssd.cc.o: ../ship_pssd.cc \
   /usr/include/stdc-predef.h \

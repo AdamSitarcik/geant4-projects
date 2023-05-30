@@ -1,7 +1,9 @@
 #include "run.hh"
 
-MyRunAction::MyRunAction()
+MyRunAction::MyRunAction(MyEventAction *eventAction)
 {
+  fEventAction = eventAction;
+
   G4AnalysisManager *man = G4AnalysisManager::Instance();
 
   man->CreateNtuple("Hits", "Hits");
@@ -11,14 +13,15 @@ MyRunAction::MyRunAction()
   man->CreateNtupleDColumn("fZ");
   man->CreateNtupleDColumn("fEdep");
   man->CreateNtupleDColumn("fEVeto");
-  man->CreateNtupleDColumn("fEGa");
+  man->CreateNtupleDColumn("fEGa", fEventAction->GetCloverEdep());
   man->FinishNtuple(0);
 }
 
 MyRunAction::~MyRunAction()
-{}
+{
+}
 
-void MyRunAction::BeginOfRunAction(const G4Run* run)
+void MyRunAction::BeginOfRunAction(const G4Run *run)
 {
   G4AnalysisManager *man = G4AnalysisManager::Instance();
 
@@ -26,10 +29,10 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
   std::stringstream strRunID;
   strRunID << runID;
 
-  man->OpenFile("outputs/output"+strRunID.str()+".root");
+  man->OpenFile("outputs/output" + strRunID.str() + ".root");
 }
 
-void MyRunAction::EndOfRunAction(const G4Run*)
+void MyRunAction::EndOfRunAction(const G4Run *)
 {
   G4AnalysisManager *man = G4AnalysisManager::Instance();
 

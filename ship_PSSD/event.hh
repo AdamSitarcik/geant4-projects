@@ -6,12 +6,13 @@
 #include "G4AnalysisManager.hh"
 #include "Randomize.hh"
 
-#include "run.hh"
+
+#include <vector>
 
 class MyEventAction : public G4UserEventAction
 {
 public:
-  MyEventAction(MyRunAction *);
+  MyEventAction();
   ~MyEventAction();
 
   virtual void BeginOfEventAction(const G4Event *);
@@ -27,12 +28,16 @@ public:
     fEVeto += eveto;
   }
 
-  void AddEGamma(G4double egamma)
+  void AddEGamma(G4double egamma, G4int detNumber)
   {
-    fEGa += egamma;
+    fEGa[detNumber] += egamma;
   }
 
+  std::vector<G4double> &GetCloverEdep() { return fEGa; };
+
 private:
-  G4double fEdep, fEVeto, fEGa;
+  G4double fEdep, fEVeto;
+
+  std::vector<G4double> fEGa;
 };
 #endif

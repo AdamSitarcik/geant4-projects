@@ -11,6 +11,7 @@ MyDetectorConstruction::MyDetectorConstruction()
   pssdThickness = 0.3 * mm;
 
   geRadius = 35 * mm;
+  geSize = 70 * mm;
   geLength = 140 * mm;
 
   windowThickness = 1 * mm;
@@ -56,13 +57,16 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
   logicAlWindow = new G4LogicalVolume(solidAlWindow, aluminum, "logicAlWindow");
   physAlWindow = new G4PVPlacement(0, G4ThreeVector(0., 0., -windowPosition), logicAlWindow, "physAlWindow", logicWorld, false, 0, true);
 
-  solidDetector_Ge = new G4Tubs("solidDetector_Ge", 0 * mm, geRadius, geLength / 2., 0., 360 * deg);
-  logicDetector_Ge = new G4LogicalVolume(solidDetector_Ge, germanium, "logicDetector_Ge");
-  physDetector_Ge = new G4PVPlacement(0, G4ThreeVector(0., 0., -gePosition), logicDetector_Ge, "physDetector_Ge", logicWorld, false, 0, true);
+  solidDetectorClover = new G4Box("solidDetectorClover", geSize / 2, geSize / 2, geLength / 2.);
+  logicDetectorClover = new G4LogicalVolume(solidDetectorClover, germanium, "logicDetector_Ge");
+  physDetectorClover = new G4PVPlacement(0, G4ThreeVector(-geSize / 2, geSize / 2, -gePosition), logicDetectorClover, "physDetectorClover", logicWorld, false, 0, true);
+  physDetectorClover = new G4PVPlacement(0, G4ThreeVector(geSize / 2, geSize / 2, -gePosition), logicDetectorClover, "physDetectorClover", logicWorld, false, 1, true);
+  physDetectorClover = new G4PVPlacement(0, G4ThreeVector(-geSize / 2, -geSize / 2, -gePosition), logicDetectorClover, "physDetectorClover", logicWorld, false, 2, true);
+  physDetectorClover = new G4PVPlacement(0, G4ThreeVector(geSize / 2, -geSize / 2, -gePosition), logicDetectorClover, "physDetectorClover", logicWorld, false, 3, true);
 
   fScoringVolumePSSD = logicDetector_PSSD;
   fScoringVolumeVeto = logicDetector_Veto;
-  fScoringVolumeGe = logicDetector_Ge;
+  fScoringVolumeGe = logicDetectorClover;
 
   return physWorld;
 }
@@ -71,9 +75,9 @@ void MyDetectorConstruction::ConstructSDandField()
 {
   MySensitiveDetector *sensDet1 = new MySensitiveDetector("SensitiveDetector1");
   MySensitiveDetector *sensDet2 = new MySensitiveDetector("SensitiveDetector2");
-  MySensitiveDetector *sensDet3 = new MySensitiveDetector("SensitiveDetector3");
+  // MySensitiveDetector *sensDet3 = new MySensitiveDetector("SensitiveDetector3");
 
   logicDetector_PSSD->SetSensitiveDetector(sensDet1);
   logicDetector_Veto->SetSensitiveDetector(sensDet2);
-  logicDetector_Ge->SetSensitiveDetector(sensDet3);
+  // logicDetector_Ge->SetSensitiveDetector(sensDet3);
 }
