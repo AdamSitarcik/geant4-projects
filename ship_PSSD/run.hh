@@ -17,6 +17,6 @@ public:
   virtual void EndOfRunAction(const G4Run *);
 
 private:
-  MyEventAction *fEventAction;
+  MyEventAction *fEventAction = nullptr;
 };
 #endif

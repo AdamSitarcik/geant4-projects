@@ -5322,10 +5322,7 @@ CMakeFiles/pssd.dir/stepping.cc.o: ../stepping.cc \
   ../event.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UserEventAction.hh \
   /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Event.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/Randomize.hh \
-  ../run.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4UserRunAction.hh \
-  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/G4Run.hh
+  /home/adam/programs/geant4-11.1.1/geant4-v11.1.1-install/include/Geant4/Randomize.hh
 
 
 ../stepping.cc:

@@ -6,7 +6,6 @@
 #include "G4AnalysisManager.hh"
 #include "Randomize.hh"
 
-
 #include <vector>
 
 class MyEventAction : public G4UserEventAction
@@ -38,6 +37,6 @@ public:
 private:
   G4double fEdep, fEVeto;
 
-  std::vector<G4double> fEGa;
+  std::vector<G4double> fEGa{0., 0., 0., 0.};
 };
 #endif
