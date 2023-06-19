@@ -28,11 +28,11 @@ void MyEventAction::EndOfEventAction(const G4Event *)
 {
   G4AnalysisManager *man = G4AnalysisManager::Instance();
   // fEdep = G4RandGauss::shoot(fEdep, 0.017); // Defining the resolution of the PSSD
-  // fEGa = G4RandGauss::shoot(fEGa, 0.0005); // Defining the resolution of the Ge detectpr
   fEdep = fEdep * 1000; // Convert energy from MeV to keV
   for (G4int i = 0; i < 4; i++)
   {
     fEGa[i] = fEGa[i] * 1000;
+    fEGa[i] = G4RandGauss::shoot(fEGa[i], 1.07); // Defining the resolution of the Ge detectpr
   }
   // fEVeto = G4RandGauss::shoot(fEVeto,0.025); // Defining the resolution of the VETO
 

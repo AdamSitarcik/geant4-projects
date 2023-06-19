@@ -19,7 +19,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 
   pssdPosition = pssdThickness / 2;
   windowPosition = pssdThickness + 12 * mm + windowThickness / 2;
-  gePosition = 5 * mm + windowPosition + geLength / 2;
+  gePosition = 10 * mm + windowPosition + geLength / 2;
   vetoPosition = pssdPosition + pssdThickness / 2 + 1 * mm;
 
   DefineMaterial();

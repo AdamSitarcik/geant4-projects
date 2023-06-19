@@ -8,5 +8,5 @@
 /gun/particle ion
 /gun/ion 101 253 0 216.
 
-/run/printProgress 10000
-/run/beamOn 100000
+/run/printProgress 25000
+/run/beamOn 250000

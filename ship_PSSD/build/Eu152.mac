@@ -1,0 +1,9 @@
+/run/numberOfThreads 6
+
+/run/initialize
+
+/gun/particle ion
+/gun/ion 63 152 0 0.
+
+/run/printProgress 25000
+/run/beamOn 1500000

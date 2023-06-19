@@ -15,8 +15,8 @@ if [ -f "outputs/output${outputNo}_t0.root" ] # check if .root files from multit
 
         rm outputs/output${outputNo}_t*.root # remove multithread .root files
 
-        root "plot.cpp($outputNo)" # plot spectra from merged file
-    elif [ -f "$output" ] # if multithread .root files are not present, but the merged file is, plot
-        then 
-            root -l "plot.cpp($outputNo)" 
+        #root "plot.cpp($outputNo)" # plot spectra from merged file
+    # elif [ -f "$output" ] # if multithread .root files are not present, but the merged file is, plot
+    #     then 
+    #         root -l "plot.cpp($outputNo)" 
 fi

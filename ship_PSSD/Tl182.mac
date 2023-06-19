@@ -1,7 +1,10 @@
-/run/initialize
+/run/numberOfThreads 6
 
+/run/initialize
 
 /gun/particle ion
 /gun/ion 81 182 0 108.
+/process/had/rdm/setRadioactiveDecayFile 81 182 ../UserData/no_subsequent_decay
 
+/run/printProgress 25000
 /run/beamOn 250000
